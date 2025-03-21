@@ -1,2 +1,2 @@
-# Project2
+# How Not to Die
 placeholder for project 2

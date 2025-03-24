@@ -17,9 +17,6 @@
 | INSERT KEY FEATURE HERE                          |                                                                                                            |
 | INSERT KEY FEATURE HERE                          |                                                                                                            |
 | INSERT KEY FEATURE HERE                          |                                                                                                            |
-| INSERT KEY FEATURE HERE                          |                                                                                                            |
-| INSERT KEY FEATURE HERE                          |                                                                                                            |
-| INSERT KEY FEATURE HERE                          |                                                                                                            |
 
 
 ## Table of Contents

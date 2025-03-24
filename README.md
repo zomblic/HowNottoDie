@@ -1,7 +1,7 @@
 #  Project Name
 ##  **Description**
 
-*Project Name* is a full-stack web application designed to showcase user interactivity, clean design, and real-time data manipulation. Built using React for the front-end and Node.js/Express.js for the back-end, the app utilizes PostgreSQL as its primary database and includes secure JWT authentication. The project supports responsive design and is fully deployed using Render. (WRITE DETAILS ABOUT *WHAT* OUR PROJECT IS HERE AFTER WE DECIDE)
+*Project Name* is a full-stack web application designed to showcase user interactivity, clean design, and real-time data manipulation. Built using React for the front-end and Node.js/Express.js for the back-end, the app utilizes PostgreSQL as its primary database and includes secure JWT authentication. The project supports responsive design and is fully deployed using Render. **(WRITE DETAILS ABOUT *WHAT* OUR PROJECT IS HERE AFTER WE DECIDE)**
 
 
 
@@ -74,7 +74,7 @@ To run the app locally:
 2. From there, users can:
 	* Sign up and log in
 	* Interact with the app features
-	* View, post, or update data (UPDATE THIS ACCORDING TO PROJECT DESIGN)
+	* View, post, or update data **(UPDATE THIS ACCORDING TO PROJECT DESIGN)**
 
 ## Screenshots
 
@@ -82,11 +82,11 @@ To run the app locally:
 
 ## Walkthrough Video
 
-* [Walkthrough Video](https://drive.google.com/LINK/GOES/HERE) (DO NOT FORGET TO ADD CORRRECT LINK HERE)
+* [Walkthrough Video](https://drive.google.com/LINK/GOES/HERE) **(DO NOT FORGET TO ADD CORRRECT LINK HERE)**
 
 ## Live Demo
 
-* [Live Demo](https://PROJECT-NAME.netlify.app/) (DO NOT FORGET TO ADD CORRRECT LINK HERE)
+* [Live Demo](https://PROJECT-NAME.netlify.app/) **(DO NOT FORGET TO ADD CORRRECT LINK HERE)**
 
 ## Contributing
 
@@ -104,16 +104,16 @@ There are currently no automated tests for this project
 
 ## Documentation
 
-* [Project Repository](https://github.com/zomblic/HowNottoDie) (UPDATE LINK IF NAME OF PROJECT CHANGES!!!!)
-* [Walkthrough Video](https://drive.google.com/LINK/GOES/HERE) (DO NOT FORGET TO ADD CORRRECT LINK HERE)
+* [Project Repository](https://github.com/zomblic/HowNottoDie) **(UPDATE LINK IF NAME OF PROJECT CHANGES!!!!)**
+* [Walkthrough Video](https://drive.google.com/LINK/GOES/HERE) **(DO NOT FORGET TO ADD CORRRECT LINK HERE)**
 * [Google Slides](https://docs.google.com/presentation/d/13Oqs7l09W7mch0W5Edy-X467CzWSoOtFeIJcjjSoi7U/edit?usp=sharing)
 * [Google Doc](https://docs.google.com/document/d/1lG3wGpQglw6aqWl2WG_FtDNSuud-BfDb08JUTFICkO8/edit?tab=t.0#heading=h.sp7vjy6pkvd4)
 
 ## Acknowledgements
 
-1. (ACKNOWLEDGEMENTS GO HERE)
-2. (ACKNOWLEDGEMENTS GO HERE)
-3. (ACKNOWLEDGEMENTS GO HERE)
+1. **(ACKNOWLEDGEMENTS GO HERE)**
+2. **(ACKNOWLEDGEMENTS GO HERE)**
+3. **(ACKNOWLEDGEMENTS GO HERE)**
 
 ## Contact
 
@@ -124,27 +124,27 @@ Alex Menendez
 *  **Email**: alexis.menendez@austincc.edu
 
 TEAM MEMBER 2
-*  **GitHub**: [TEAM-MEMBER](https://github.com/USERNAME) (DO NOT FORGET TO ADD CORRRECT LINK HERE)
+*  **GitHub**: [TEAM-MEMBER](https://github.com/USERNAME) **(DO NOT FORGET TO ADD CORRRECT LINK HERE)**
 *  **Email**: EMAIL@EMAIL.COM
 
 TEAM MEMBER 3
-*  **GitHub**: [TEAM-MEMBER](https://github.com/USERNAME) (DO NOT FORGET TO ADD CORRRECT LINK HERE)
-*  **Email**: EMAIL@EMAIL.COM
+*  **GitHub**: [TEAM-MEMBER](https://github.com/USERNAME) **(DO NOT FORGET TO ADD CORRRECT LINK HERE)**
+*  **Email**: EMAIL@EMAIL.COM **(DO NOT FORGET TO ADD CORRRECT EMAIL HERE)**
 
 TEAM MEMBER 4
-*  **GitHub**: [TEAM-MEMBER](https://github.com/USERNAME) (DO NOT FORGET TO ADD CORRRECT LINK HERE)
-*  **Email**: EMAIL@EMAIL.COM
+*  **GitHub**: [TEAM-MEMBER](https://github.com/USERNAME) **(DO NOT FORGET TO ADD CORRRECT LINK HERE)**
+*  **Email**: EMAIL@EMAIL.COM **(DO NOT FORGET TO ADD CORRRECT EMAIL HERE)**
 
 TEAM MEMBER 5
-*  **GitHub**: [TEAM-MEMBER](https://github.com/USERNAME) (DO NOT FORGET TO ADD CORRRECT LINK HERE)
-*  **Email**: EMAIL@EMAIL.COM
+*  **GitHub**: [TEAM-MEMBER](https://github.com/USERNAME) **(DO NOT FORGET TO ADD CORRRECT LINK HERE)**
+*  **Email**: EMAIL@EMAIL.COM **(DO NOT FORGET TO ADD CORRRECT EMAIL HERE)**
 
 TEAM MEMBER 6
-*  **GitHub**: [TEAM-MEMBER](https://github.com/USERNAME) (DO NOT FORGET TO ADD CORRRECT LINK HERE)
-*  **Email**: EMAIL@EMAIL.COM
+*  **GitHub**: [TEAM-MEMBER](https://github.com/USERNAME) **(DO NOT FORGET TO ADD CORRRECT LINK HERE)**
+*  **Email**: EMAIL@EMAIL.COM **(DO NOT FORGET TO ADD CORRRECT EMAIL HERE)**
 
 TEAM MEMBER 7
-*  **GitHub**: [TEAM-MEMBER](https://github.com/USERNAME) (DO NOT FORGET TO ADD CORRRECT LINK HERE)
-*  **Email**: EMAIL@EMAIL.COM
+*  **GitHub**: [TEAM-MEMBER](https://github.com/USERNAME) **(DO NOT FORGET TO ADD CORRRECT LINK HERE)**
+*  **Email**: EMAIL@EMAIL.COM **(DO NOT FORGET TO ADD CORRRECT EMAIL HERE)**
 
 

@@ -104,8 +104,9 @@ There are currently no automated tests for this project
 
 ## Documentation
 
-* [Project Repository](https://github.com/alexis-menendez/RoleCall)
+* [Project Repository](https://github.com/zomblic/HowNottoDie) UPDATE LINK IF NAME OF PROJECT CHANGES!!!!
 * [Walkthrough Video](https://drive.google.com/LINK/GOES/HERE)
+* [Google Slides]([https://drive.google.com/LINK/GOES/HERE](https://docs.google.com/presentation/d/13Oqs7l09W7mch0W5Edy-X467CzWSoOtFeIJcjjSoi7U/edit?usp=sharing))
 * [Google Doc](https://docs.google.com/document/d/1lG3wGpQglw6aqWl2WG_FtDNSuud-BfDb08JUTFICkO8/edit?tab=t.0#heading=h.sp7vjy6pkvd4)
 
 ## Acknowledgements
@@ -123,27 +124,27 @@ Alex Menendez
 *  **Email**: alexis.menendez@austincc.edu
 
 TEAM MEMBER 2
-*  **GitHub**: [TEAM-MEMBER](https://github.com/alexis-menendez)
+*  **GitHub**: [TEAM-MEMBER](https://github.com/USERNAME)
 *  **Email**: EMAIL@EMAIL.COM
 
 TEAM MEMBER 3
-*  **GitHub**: [TEAM-MEMBER](https://github.com/alexis-menendez)
+*  **GitHub**: [TEAM-MEMBER](https://github.com/USERNAME)
 *  **Email**: EMAIL@EMAIL.COM
 
 TEAM MEMBER 4
-*  **GitHub**: [TEAM-MEMBER](https://github.com/alexis-menendez)
+*  **GitHub**: [TEAM-MEMBER](https://github.com/USERNAME)
 *  **Email**: EMAIL@EMAIL.COM
 
 TEAM MEMBER 5
-*  **GitHub**: [TEAM-MEMBER](https://github.com/alexis-menendez)
+*  **GitHub**: [TEAM-MEMBER](https://github.com/USERNAME)
 *  **Email**: EMAIL@EMAIL.COM
 
 TEAM MEMBER 6
-*  **GitHub**: [TEAM-MEMBER](https://github.com/alexis-menendez)
+*  **GitHub**: [TEAM-MEMBER](https://github.com/USERNAME)
 *  **Email**: EMAIL@EMAIL.COM
 
 TEAM MEMBER 7
-*  **GitHub**: [TEAM-MEMBER](https://github.com/alexis-menendez)
+*  **GitHub**: [TEAM-MEMBER](https://github.com/USERNAME)
 *  **Email**: EMAIL@EMAIL.COM
 
 

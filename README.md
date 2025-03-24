@@ -3,30 +3,24 @@
 
 *Project Name* is a full-stack web application designed to showcase user interactivity, clean design, and real-time data manipulation. Built using React for the front-end and Node.js/Express.js for the back-end, the app utilizes PostgreSQL as its primary database and includes secure JWT authentication. The project supports responsive design and is fully deployed using Render. (WRITE DETAILS ABOUT *WHAT* OUR PROJECT IS HERE AFTER WE DECIDE)
 
-**Key Features**
 
-* Interactive, intuitive UI built with React
-* Secure user authentication using JWT
-* PostgreSQL database managed with Sequelize ORM
-* Responsive layout for mobile and desktop
-* RESTful API endpoints (GET and POST routes)
-* Integration with at least two server-side APIs
-* Secure handling of API keys and environment variables
-* INSERT KEY FEATURE HERE
-* INSERT KEY FEATURE HERE
-* INSERT KEY FEATURE HERE
-* INSERT KEY FEATURE HERE
-* INSERT KEY FEATURE HERE
-* INSERT KEY FEATURE HERE
 
-**Technology Stack**
-* **Front-End:** [React](https://react.dev/)
-* **Back-End:** [Node.js](https://nodejs.org/), [Express.js](https://expressjs.com/)
-* **Database:** [PostgreSQL](https://www.npmjs.com/package/pg), [Sequelize ORM](https://sequelize.org/)
-* **Authentication:** [JWT](https://jwt.io/)
-* **Deployment:** [Render](https://render.com/)
-* **Version Control:** [Git](https://git-scm.com/), [GitHub](https://github.com/)
-* **OTHER:** INSERT TECHNOLOGY STACK HERE
+| **Key Features**                                 | **Technology Stack**                                                                                       |
+|--------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| Interactive, intuitive UI built with React       | **Front-End:** [React](https://react.dev/)                                                                 |
+| Secure user authentication using JWT             | **Back-End:** [Node.js](https://nodejs.org/), [Express.js](https://expressjs.com/)                         |
+| PostgreSQL database with Sequelize ORM           | **Database:** [PostgreSQL](https://www.npmjs.com/package/pg), [Sequelize ORM](https://sequelize.org/)      |
+| Responsive layout for mobile and desktop         | **Authentication:** [JWT](https://jwt.io/)                                                                 |
+| RESTful API endpoints (GET and POST)             | **Deployment:** [Render](https://render.com/)                                                              |
+| Integration with at least two server-side APIs   | **Version Control:** [Git](https://git-scm.com/), [GitHub](https://github.com/)                            |
+| Secure handling of API keys and env variables    | **OTHER:** INSERT TECHNOLOGY STACK HERE                                                                    |
+| INSERT KEY FEATURE HERE                          |                                                                                                            |
+| INSERT KEY FEATURE HERE                          |                                                                                                            |
+| INSERT KEY FEATURE HERE                          |                                                                                                            |
+| INSERT KEY FEATURE HERE                          |                                                                                                            |
+| INSERT KEY FEATURE HERE                          |                                                                                                            |
+| INSERT KEY FEATURE HERE                          |                                                                                                            |
+
 
 ## Table of Contents
 

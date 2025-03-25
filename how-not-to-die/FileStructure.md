@@ -36,7 +36,7 @@ HOWNOTTODIE/                  ← Root Git repo folder
     │   ├── assets/
     │   │   └── css/
     │   │       ├── Dashboard.module.css, etc.
-    │   │       └── [other module CSS files]
+    │   │       └── [other .module.css files]
     │   │
     │   ├── components/
     │   │   └── PlanetCard.jsx, etc.

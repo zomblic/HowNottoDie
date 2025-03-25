@@ -2,7 +2,7 @@ Project File Structure
 ======================
 
 HOWNOTTODIE/                  ← Root Git repo folder
-├── README.md
+├── README.md                 ← This should be here (so it appears on Github)
 │
 └── how-not-to-die/           ← Vite project root (client)
     ├── .gitignore

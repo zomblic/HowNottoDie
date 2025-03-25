@@ -27,14 +27,15 @@ HOWNOTTODIE/                  ← Root Git repo folder
     │   │   ├── seeds.sql
     │   │   └── db.json
     │   └── src/
-    |       ├── routes
+    |       ├── tsconfig.json   
     │       ├── service
-    │       └── tsconfig.json
+    │       └── routes
+    |           └── api
     │
     ├── src/                   ← Frontend source code
     │   ├── assets/
     │   │   └── css/
-    │   │       ├── Dashboard.module.css
+    │   │       ├── Dashboard.module.css, etc.
     │   │       └── [other module CSS files]
     │   │
     │   ├── components/

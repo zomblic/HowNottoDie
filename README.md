@@ -1,7 +1,9 @@
-#  Project Name
+#  How Not To Die
 ##  **Description**
 
-*Project Name* is a full-stack web application designed to showcase user interactivity, clean design, and real-time data manipulation. Built using React for the front-end and Node.js/Express.js for the back-end, the app utilizes PostgreSQL as its primary database and includes secure JWT authentication. The project supports responsive design and is fully deployed using Render. **(WRITE DETAILS ABOUT *WHAT* OUR PROJECT IS HERE AFTER WE DECIDE)**
+**How Not To Die** is a full-stack web application designed to showcase user interactivity, clean design, and real-time data manipulation. Set within a stylized space-console interface, the app invites users to assume the role of an interstellar explorer navigating unknown planets, documenting survival findings, and responding to unexpected system failures.
+Users begin at a sign-in console and enter a central control dashboard, where they can access personal logs, explore planetary systems, and contribute to a collective archive of explorer entries. Users can also interact with a galaxy map, preview planetary data, and launch a shuttle to visit accessible worlds. Each planet includes an immersive landscape with interactive elements, an entry log system to add new logs into the survival guide, and a “malfunctioning” weather scanner that pulls real Earth weather as a stand-in for planetary conditions.
+Built using React for the front-end and Node.js/Express.js for the back-end, the app utilizes PostgreSQL with Sequelize for data persistence and includes secure JWT-based authentication. Blending sci-fi aesthetics with real-time functionality, *How Not To Die* is fully responsive, packed with thematic animations and atmospheric details, and deployed via Render. As users explore, they’ll encounter broken tools, hidden transmissions, mysterious planets filled with danger and mystery.
 
 
 

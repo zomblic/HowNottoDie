@@ -1,40 +1,17 @@
-// file path: how-not-to-die/src/pages/Dashboard.jsx
-// Commander’s main panel
+// file path: src/pages/Dashboard.jsx
 
 import React from 'react';
-import styles from "../assets/css/Dashboard.module.css";
-
-// below is an example of how to set your jsx page up
-// so that it grabs whatever component you need for this page /Alexis
-
-import Dashboard from '../components/ExampleComponent'; 
+import styles from '../assets/css/Dashboard.module.css';
 
 const Dashboard = () => {
-  return (
-    <div>
-      <ExampleComponent />
-    </div>
-  );
-};
-
-export default Dashboard;
-
-// It can also look like this:
-
-//const Resume = () => {
-//    return (
-//      <ExampleComponent>
-//        <div className={styles.resumeContent}>
-//          <a href="public/assets/pdf/TechResume2025.pdf" download="TechResume2025.pdf">
-//            Thanks for stopping by!
-//          </a>
-//          <a href="public/assets/pdf/TechResume2025.pdf" download="TechResume2025.pdf">
-//            Click here to download my resume as a PDF
-//          </a>
-//          <div className={styles.resumeImage}>
-//            <img src="/assets/images/TechResume2025.webp" alt="Resume" />
-//          </div>
-//        </div>
-//      </ExampleComponent>
-//    );
-//  };  
+    return (
+      <div className={styles.consoleBackground}>
+        <div className={styles.consoleScreen}>
+          <h2>Welcome, Commander</h2>
+          <p>VERA is watching...</p>
+        </div>
+      </div>
+    );
+  };
+  
+  export default Dashboard;

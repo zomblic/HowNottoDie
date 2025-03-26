@@ -7,6 +7,7 @@
   flex-direction: column;
   gap: 0.5rem;
   padding: 1rem 0;
+  width: 200px; 
 }
 
 .navButton {
@@ -37,4 +38,51 @@
   float: right;
   font-size: 1.1em;
   color: #00ffe1;
+}
+
+/* Media queries */
+
+/* media queries for tablets */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .navColumn {
+    width: 100px;             /* Narrower for small screens */
+    max-height: 100%;         /* Allow full height usage */
+    overflow-y: auto;         /* ✅ Enables vertical scrolling */
+    padding-right: 0.5rem;    /* Optional: tighter padding */
+  }
+
+  .navButton {
+    font-size: 0.90rem;       /* ✅ Smaller text */
+    padding: 0.4rem 0.5rem;   /* Less padding for tighter layout */
+    white-space: normal;
+    text-align: center;
+    word-break: break-word;
+  }
+
+  .star {
+    font-size: 0.42rem;        /* Adjust star size if needed */
+  }
+}
+
+
+/* media queries for phones */
+@media screen and (max-width: 767px) {
+  .navColumn {
+    width: 50px;             /* Narrower for small screens */
+    max-height: 100%;         /* Allow full height usage */
+    overflow-y: auto;         /* ✅ Enables vertical scrolling */
+    padding-right: 0.5rem;    /* Optional: tighter padding */
+  }
+
+  .navButton {
+    font-size: 0.42rem;       /* ✅ Smaller text */
+    padding: 0.4rem 0.5rem;   /* Less padding for tighter layout */
+    white-space: normal;
+    text-align: center;
+    word-break: break-word;
+  }
+
+  .star {
+    font-size: 0.42rem;        /* Adjust star size if needed */
+  }
 }

@@ -2,27 +2,44 @@
 // Top nav bar
 
 import React from 'react';
-// import styles from "../assets/css/Navigation.module.css";
+import { Link, useLocation } from 'react-router-dom';
+import styles from "../assets/css/Navigation.module.css";
 
-function Navigation() {
+const Navigation = () => {
+    const location = useLocation();
+  
+    const isActive = (path) => location.pathname === path;
+  
     return (
-        <div className={styles.nav}>
-            <ul>
-                <li>
-                    <a href='#section'>Survival Guide</a>
-                </li>
-                <li>
-                    <a href='#section'>Logs</a>
-                </li>
-                <li>
-                    <a href='#section'>Travel</a>
-                </li>
-                <li>
-                    <a href='#section'>Logout</a>
-                </li>
-            </ul>
-        </div>
-    );
-}
-export default Navigation
+        <nav className={styles.navbar}>
+          <div className={styles.leftNav}>
+            <Link to="/" className={styles.homeLink}>Sign In</Link>
+          </div>
+          <ul className={styles.rightNav}>
+            <li className={isActive('/dashboard') ? styles.active : ''}>
+              <Link to="/dashboard">
+                {isActive('/dashboard') && '✦ '}Command Center
+              </Link>
+            </li>
+            <li className={isActive('/personallogs') ? styles.active : ''}>
+              <Link to="/personallogs">
+                {isActive('/personallogs') && '✦ '}Personal Logs
+              </Link>
+            </li>
+            <li className={isActive('/survivalguide') ? styles.active : ''}>
+              <Link to="/survivalguide">
+                {isActive('/survivalguide') && '✦ '}Survival Guide
+              </Link>
+            </li>
+            <li className={isActive('/planettravel') ? styles.active : ''}>
+              <Link to="/planettravel">
+                {isActive('/planettravel') && '✦ '}Galaxy Map
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      );
+    };
+    
+    export default Navigation;
 

@@ -1,12 +1,13 @@
+// file path: how-not-to-die/src/pages/PlanetTravel.jsx
+
 import React from 'react';
-import ConsoleLayout from '../components/ConsoleLayout';
 
 const PlanetTravel = () => {
   return (
-    <ConsoleLayout>
+    <>
       <h2>Welcome, Commander</h2>
       <p>VERA is watching...</p>
-    </ConsoleLayout>
+    </>
   );
 };
 

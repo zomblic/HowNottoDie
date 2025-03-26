@@ -2,14 +2,14 @@
 // Second planet details + logs
 
 import React from 'react';
-import ConsoleLayout from '../components/ConsoleLayout';
-import PlanetCard from '../components/PlanetCard';
 
 const PlanetTwo = () => {
   return (
-    <></>
+    <>
+      <h2>Welcome, Commander</h2>
+      <p>VERA is watching...</p>
+    </>
   );
 };
-
 
 export default PlanetTwo;

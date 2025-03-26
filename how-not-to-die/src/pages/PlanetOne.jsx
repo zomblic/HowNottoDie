@@ -2,14 +2,14 @@
 // Planet 1 details + logs
 
 import React from 'react';
-import ConsoleLayout from '../components/ConsoleLayout';
-import PlanetCard from '../components/PlanetCard';
 
 const PlanetOne = () => {
   return (
-    <></>
+    <>
+      <h2>Welcome, Commander</h2>
+      <p>VERA is watching...</p>
+    </>
   );
 };
-
 
 export default PlanetOne;

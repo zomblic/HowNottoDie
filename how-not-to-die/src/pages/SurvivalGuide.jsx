@@ -1,7 +1,10 @@
+// file path: how-not-to-die/src/pages/SurvivalGuide.jsx
+// View/edit user’s own logs
+
 import React from 'react';
 import ConsoleLayout from '../components/ConsoleLayout';
 
-const PlanetTravel = () => {
+const SurvivalGuide = () => {
   return (
     <ConsoleLayout>
       <h2>Welcome, Commander</h2>
@@ -10,4 +13,4 @@ const PlanetTravel = () => {
   );
 };
 
-export default PlanetTravel;
+export default SurvivalGuide;

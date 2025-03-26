@@ -4,7 +4,24 @@
 import React from 'react';
 import styles from "../assets/css/Navigation.module.css";
 
-
-
-
-export default Navigation;
+function Navigation() {
+    return (
+        <div className={styles.nav}>
+            <ul>
+                <li>
+                    <a href='#section'>Survival Guide</a>
+                </li>
+                <li>
+                    <a href='#section'>Logs</a>
+                </li>
+                <li>
+                    <a href='#section'>Travel</a>
+                </li>
+                <li>
+                    <a href='#section'>Logout</a>
+                </li>
+            </ul>
+        </div>
+    );
+}
+export default Navigation

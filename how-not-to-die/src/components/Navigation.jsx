@@ -1,45 +1,54 @@
 // file path: how-not-to-die/src/components/Navigation.jsx
-// Top nav bar
+// Side nav bar
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styles from "../assets/css/Navigation.module.css";
 
 const Navigation = () => {
-    const location = useLocation();
-  
-    const isActive = (path) => location.pathname === path;
-  
-    return (
-        <nav className={styles.navbar}>
-          <div className={styles.leftNav}>
-            <Link to="/" className={styles.homeLink}>Sign In</Link>
-          </div>
-          <ul className={styles.rightNav}>
-            <li className={isActive('/dashboard') ? styles.active : ''}>
-              <Link to="/dashboard">
-                {isActive('/dashboard') && '✦ '}Command Center
-              </Link>
-            </li>
-            <li className={isActive('/personallogs') ? styles.active : ''}>
-              <Link to="/personallogs">
-                {isActive('/personallogs') && '✦ '}Personal Logs
-              </Link>
-            </li>
-            <li className={isActive('/survivalguide') ? styles.active : ''}>
-              <Link to="/survivalguide">
-                {isActive('/survivalguide') && '✦ '}Survival Guide
-              </Link>
-            </li>
-            <li className={isActive('/planettravel') ? styles.active : ''}>
-              <Link to="/planettravel">
-                {isActive('/planettravel') && '✦ '}Galaxy Map
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      );
-    };
-    
-    export default Navigation;
+  const location = useLocation();
+  const isActive = (path) => location.pathname === path;
+
+  return (
+    <nav className={styles.navColumn}>
+      <Link
+        to="/"
+        className={`${styles.navButton} ${isActive('/') ? styles.active : ''}`}
+        >
+        Sign In
+        {isActive('/') && <span className={styles.star}> ✦</span>}
+      </Link>
+      <Link
+        to="/dashboard"
+        className={`${styles.navButton} ${isActive('/dashboard') ? styles.active : ''}`}
+        >
+        Command Center
+        {isActive('/dashboard') && <span className={styles.star}> ✦</span>}
+      </Link>
+      <Link
+        to="/personallogs"
+        className={`${styles.navButton} ${isActive('/personallogs') ? styles.active : ''}`}
+        >
+        Personal Logs
+        {isActive('/personallogs') && <span className={styles.star}> ✦</span>}
+      </Link>
+      <Link
+        to="/survivalguide"
+        className={`${styles.navButton} ${isActive('/survivalguide') ? styles.active : ''}`}
+        >
+        Survival Guide
+        {isActive('/survivalguide') && <span className={styles.star}> ✦</span>}
+      </Link>
+      <Link
+        to="/planettravel"
+        className={`${styles.navButton} ${isActive('/planettravel') ? styles.active : ''}`}
+        >
+        Galaxy Map
+        {isActive('/planettravel') && <span className={styles.star}> ✦</span>}
+      </Link>
+    </nav>
+  );
+};
+
+export default Navigation;
 

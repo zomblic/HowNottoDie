@@ -19,7 +19,7 @@ const Home = () => {
 
 export default Home;
 
-// It can also look like this:
+// It can also look like this: // comment so I can push
 
 //const Resume = () => {
 //    return (

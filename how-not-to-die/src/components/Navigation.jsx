@@ -2,8 +2,13 @@
 // Top nav bar
 
 import React from 'react';
-import styles from "../assets/css/Navigation.module.css";
+// import styles from "../assets/css/Navigation.module.css";
 
+const Navigation = () => {
+    return (
+      <></>
+    );
+  };
 
 
 

@@ -45,22 +45,22 @@
 /* media queries for tablets */
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .navColumn {
-    width: 100px;             /* Narrower for small screens */
-    max-height: 100%;         /* Allow full height usage */
-    overflow-y: auto;         /* ✅ Enables vertical scrolling */
-    padding-right: 0.5rem;    /* Optional: tighter padding */
+    width: 100px;             
+    max-height: 100%;        
+    overflow-y: auto;         
+    padding-right: 0.5rem;    
   }
 
   .navButton {
-    font-size: 0.90rem;       /* ✅ Smaller text */
-    padding: 0.4rem 0.5rem;   /* Less padding for tighter layout */
+    font-size: 0.90rem;       
+    padding: 0.4rem 0.5rem;   
     white-space: normal;
     text-align: center;
     word-break: break-word;
   }
 
   .star {
-    font-size: 0.42rem;        /* Adjust star size if needed */
+    font-size: 0.42rem;        
   }
 }
 
@@ -68,21 +68,21 @@
 /* media queries for phones */
 @media screen and (max-width: 767px) {
   .navColumn {
-    width: 50px;             /* Narrower for small screens */
-    max-height: 100%;         /* Allow full height usage */
-    overflow-y: auto;         /* ✅ Enables vertical scrolling */
-    padding-right: 0.5rem;    /* Optional: tighter padding */
+    width: 50px;             
+    max-height: 100%;         
+    overflow-y: auto;        
+    padding-right: 0.5rem;    
   }
 
   .navButton {
-    font-size: 0.42rem;       /* ✅ Smaller text */
-    padding: 0.4rem 0.5rem;   /* Less padding for tighter layout */
+    font-size: 0.42rem;       
+    padding: 0.4rem 0.5rem;   
     white-space: normal;
     text-align: center;
     word-break: break-word;
   }
 
   .star {
-    font-size: 0.42rem;        /* Adjust star size if needed */
+    font-size: 0.42rem;       
   }
 }

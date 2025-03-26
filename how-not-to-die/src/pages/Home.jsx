@@ -3,6 +3,9 @@
 
 import React from 'react';
 import ConsoleLayout from '../components/ConsoleLayout';
+// import LoginForm from '../components/LoginForm';
+// import RegisterForm from '../components/RegisterForm';
+// import AuthWrapper from '../components/AuthWrapper';
 
 const Home = () => {
   return (

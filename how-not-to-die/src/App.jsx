@@ -3,11 +3,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navigation from './components/Navigation';
-import Footer from './components/Footer';
 import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import PersonalLogs from './pages/PersonalLogs';
-import SubmitLog from './pages/SubmitLog';
 import PlanetTravel from './pages/PlanetTravel';
 import PlanetOne from './pages/PlanetOne';
 import PlanetTwo from './pages/PlanetTwo';

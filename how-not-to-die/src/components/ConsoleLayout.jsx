@@ -1,6 +1,7 @@
-// src/components/ConsoleLayout.jsx
+// file path: how-not-to-die/src/components/ConsoleLayout.jsx
+
 import React from 'react';
-import styles from '../styles/ConsoleLayout.module.css';
+import styles from '../assets/css/ConsoleLayout.module.css';
 
 const ConsoleLayout = ({ children }) => {
   return (

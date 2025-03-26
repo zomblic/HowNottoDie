@@ -4,7 +4,11 @@
 import React from 'react';
 import styles from "../assets/css/WeatherScanner.module.css";
 
-
+const WeatherScanner = () => {
+    return (
+      <></>
+    );
+  };
 
 
 export default WeatherScanner;

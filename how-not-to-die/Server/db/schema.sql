@@ -1,7 +1,7 @@
 DROP DATABASE IF EXISTS planetary;
 CREATE DATABASE planetary;  
   
-\c planetary;
+\c planets;
 
 CREATE TABLE planet (
     id SERIAL PRIMARY KEY,

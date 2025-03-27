@@ -1,4 +1,4 @@
-// file path: how-not-to-die/src/components/VeraQuote.jsx
+// file path: how-not-to-die/client/src/components/VeraQuote.jsx
 // Display a random Vera quote
 
 // need to figure out how to seperate this by page/Alexis

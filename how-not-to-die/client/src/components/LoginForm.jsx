@@ -1,4 +1,4 @@
-// file path: how-not-to-die/src/components/LoginForm.jsx
+// file path: how-not-to-die/client/src/components/LoginForm.jsx
 
 import React from 'react';
 import styles from '../assets/css/Home.module.css';

@@ -7,7 +7,7 @@
     background-color: rgba(0, 255, 225, 0.03);
     border: 1px solid #00ffe1;
     border-radius: 12px;
-    padding-top: 4rem;
+    padding-top: 50rem;
   }
   
   h2 {
@@ -30,3 +30,11 @@
     padding: 1rem;
   }
   
+
+  /* Desktop (e.g. 1200px and up) */
+@media screen and (min-width: 1200px) {
+    .pageContent {
+      justify-content: flex-start;
+      padding-top: 1.5rem; /* 👈 Add this */
+    }
+  }

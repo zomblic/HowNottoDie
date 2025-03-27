@@ -1,4 +1,4 @@
-// src/components/LayoutRouter.jsx
+// file path: how-not-to-die/client/src/components/LayoutRouter.jsx
 import React from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import ConsoleLayout from './ConsoleLayout';

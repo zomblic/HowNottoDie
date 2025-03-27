@@ -1,4 +1,4 @@
-// file path: how-not-to-die/src/components/LogCard.jsx
+// file path: how-not-to-die/client/src/components/LogCard.jsx
 // Reusable display for log entries
 
 import React from 'react';

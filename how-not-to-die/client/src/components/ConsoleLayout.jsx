@@ -1,4 +1,4 @@
-// src/components/ConsoleLayout.jsx
+// how-not-to-die/client/src/components/ConsoleLayout.jsx
 import React from 'react';
 import styles from '../assets/css/ConsoleLayout.module.css';
 

@@ -1,13 +1,14 @@
-DROP DATABASE IF EXISTS PLANETARY;
-CREATE DATABASE PLANETARY;    
-\c PLANETARY;
+DROP DATABASE IF EXISTS planetary;
+CREATE DATABASE planetary;  
+  
+\c planetary;
 
 CREATE TABLE planet (
     id SERIAL PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
     description TEXT NOT NULL,
     hostility VARCHAR(15) NOT NULL,
-    explorationRisk INT NOT NULL,
+    exploration INT NOT NULL
     
 );
 
@@ -40,15 +41,6 @@ CREATE TABLE fauna (
 );
 
 CREATE TABLE unexplained (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(50) NOT NULL,
-    description TEXT NOT NULL,
-    planet_id INT NOT NULL,
-    FOREIGN KEY (planet_id) REFERENCES planet(id) ON DELETE CASCADE
-);
-
-
-CREATE TABLE ?? (
     id SERIAL PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
     description TEXT NOT NULL,

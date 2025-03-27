@@ -1,5 +1,5 @@
-DROP DATABASE IF EXISTS planetary;
-CREATE DATABASE planetary;  
+DROP DATABASE IF EXISTS planets;
+CREATE DATABASE planets;  
   
 \c planets;
 

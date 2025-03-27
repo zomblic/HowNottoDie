@@ -1,6 +1,7 @@
 // file path: how-not-to-die/src/pages/SurvivalGuide.jsx
 // View/edit user’s own logs
-
+// Alexis, don't worry about this page for now. I'll be working on it along side everything. 
+//I'll also make sure not to commit if it's website breaking, unless I need someone to look at the code, then close the pull request, 'kay?
 import React, { useEffect, useState } from 'react';
 import styles from '../assets/css/SurvivalGuide.module.css';
 

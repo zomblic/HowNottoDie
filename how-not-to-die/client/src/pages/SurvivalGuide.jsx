@@ -31,7 +31,7 @@ const SurvivalGuide = () => {
     <strong>Planet Skarn</strong><br />
     <strong>[flora]</strong> The Clingvine looks like a vine, hugs like a bear, and never lets go. Bring scissors.<br />
     <strong>[fauna]</strong> Glowtail lizards are attracted to electronic signals and prone to stealing batteries.<br />
-    <strong>[weather]</strong> Temperature fluctuates 80 degrees hourly. Layering is not optional — it's survival.
+    <strong>[weather]</strong> Temperature fluctuates 80 degrees hourly. Layering is not optional — it's survival
   </li>
 
   <li>

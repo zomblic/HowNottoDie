@@ -1,0 +1,32 @@
+.container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Courier New', monospace;
+    color: #00ffe1;
+    background-color: rgba(0, 255, 225, 0.03);
+    border: 1px solid #00ffe1;
+    border-radius: 12px;
+    padding-top: 4rem;
+  }
+  
+  h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .guideList {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .guideList li {
+    background-color: rgba(0, 255, 225, 0.05);
+    border: 1px solid #00ffe1;
+    border-radius: 6px;
+    padding: 1rem;
+  }
+  

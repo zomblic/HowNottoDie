@@ -1,4 +1,4 @@
-// file path: how-not-to-die/src/components/PlanetCard.jsx
+// file path: how-not-to-die/client/src/components/PlanetCard.jsx
 // Card showing a preview of each planet in the travel hub
 
 import React from 'react';

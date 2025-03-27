@@ -1,4 +1,4 @@
-// file path: src/app.jsx 
+// file path: how-not-to-die/client/src/app.jsx 
 
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';

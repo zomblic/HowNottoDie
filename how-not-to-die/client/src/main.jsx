@@ -1,4 +1,4 @@
-// file path: /src/main.jsx
+// file path: how-not-to-die/client/src/main.jsx
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';

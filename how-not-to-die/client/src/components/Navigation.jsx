@@ -1,4 +1,4 @@
-// file path: how-not-to-die/src/components/Navigation.jsx
+// file path: how-not-to-die/client/src/components/Navigation.jsx
 // Side nav bar
 
 import React from 'react';

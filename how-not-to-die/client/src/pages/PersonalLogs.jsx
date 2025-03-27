@@ -2,102 +2,72 @@
 // View/edit user’s own logs
 
 import React, { useState } from 'react';
-import VeraQuote from '../components/VeraQuote';
 import styles from '../assets/css/PersonalLogs.module.css';
-
-const EditLogModal = ({ log, onClose, onSave }) => {
-  const [title, setTitle] = useState(log.title || '');
-  const [content, setContent] = useState(log.content || '');
-
-  const handleSave = () => {
-    onSave({ ...log, title, content });
-  };
-
-  return (
-    <div className="modal">
-      <h2>{log.id ? 'Edit Log' : 'New Log'}</h2>
-      <label>
-        Title:
-        <input
-          type="text"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-        />
-      </label>
-      <label>
-        Content:
-        <textarea
-          value={content}
-          onChange={(e) => setContent(e.target.value)}
-        />
-      </label>
-      <button onClick={handleSave}>Save</button>
-      <button onClick={onClose}>Cancel</button>
-    </div>
-  );
-};
+import EditLogModal from '../components/EditLogModal';
 
 const PersonalLogs = () => {
   const [logs, setLogs] = useState([
-    { id: 1, title: 'Log 1', content: 'Content for log 1' },
-    { id: 2, title: 'Log 2', content: 'Content for log 2' },
+    { id: 1, title: 'First Contact', content: 'Met something with three eyes. It waved.' },
+    { id: 2, title: 'Oxygen Leak', content: 'Woke up light-headed. Fixed the seal with chewing gum.' }
   ]);
-  const [selectedLog, setSelectedLog] = useState(null);
-  const [showModal, setShowModal] = useState(false);
+
+  const [editingLog, setEditingLog] = useState(null);
 
   const handleEdit = (log) => {
-    setSelectedLog(log);
-    setShowModal(true);
+    setEditingLog(log);
   };
 
-  const handleSave = (updatedLog) => {
+  const handleCloseModal = () => {
+    setEditingLog(null);
+  };
+
+  const handleSaveLog = (updatedLog) => {
     if (updatedLog.id) {
-      // Update existing log
-      setLogs((prevLogs) =>
-        prevLogs.map((log) => (log.id === updatedLog.id ? updatedLog : log))
+      // Existing log
+      const updatedLogs = logs.map(log =>
+        log.id === updatedLog.id ? updatedLog : log
       );
+      setLogs(updatedLogs);
     } else {
-      // Add new log
-      setLogs((prevLogs) => [
-        ...prevLogs,
-        { ...updatedLog, id: Date.now() }, // Assign a unique ID
-      ]);
+      // New log
+      const newLog = {
+        ...updatedLog,
+        id: Date.now(),
+      };
+      setLogs([...logs, newLog]);
     }
-    setShowModal(false);
+  
+    setEditingLog(null);
   };
-
-  const handleDelete = (id) => {
-    setLogs((prevLogs) => prevLogs.filter((log) => log.id !== id));
+  
+  const handleDeleteLog = (idToDelete) => {
+    const filteredLogs = logs.filter(log => log.id !== idToDelete);
+    setLogs(filteredLogs);
   };
-
-  const handleAdd = () => {
-    setSelectedLog({ title: '', content: '' }); // Empty log for new entry
-    setShowModal(true);
-  };
+  
 
   return (
     <div className={styles.container}>
-      <h2>Welcome, Commander</h2>
-      <VeraQuote />
-      <p>Your personal logs are archived below:</p>
-
-      <button onClick={handleAdd}>Add New Log</button>
-      <div className={styles.logList}>
+      <h2>Personal Logs</h2>
+        <button className={styles.newLogButton} onClick={() => setEditingLog({ title: '', content: '' })}>
+          + New Log
+        </button>
+        <div className={styles.logList}>
         {logs.map((log) => (
           <div key={log.id} className={styles.logCard}>
             <h3>{log.title}</h3>
             <p>{log.content}</p>
             <button onClick={() => handleEdit(log)}>Edit</button>
-            <button onClick={() => handleDelete(log.id)}>Delete</button>
+            <button onClick={() => handleDeleteLog(log.id)}>Delete</button>
           </div>
         ))}
       </div>
 
-      {showModal && (
+      {editingLog && (
         <EditLogModal
-          log={selectedLog}
-          onClose={() => setShowModal(false)}
-          onSave={handleSave}
+          log={editingLog}
+          onClose={handleCloseModal}
+          onSave={handleSaveLog}
         />
       )}
     </div>

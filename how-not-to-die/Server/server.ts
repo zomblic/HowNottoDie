@@ -10,7 +10,7 @@ const pool = new Pool({
   port: 5432,
 });
 
-app.get('/api/planets', async (req, res) => {
+app.get('/api/planets', async (_, res) => {
   try {
     const result = await pool.query(`
       SELECT 

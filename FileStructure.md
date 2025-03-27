@@ -17,11 +17,11 @@ HOWNOTTODIE/                     ← Root Git repo folder
     │   ├── src/                 ← Frontend source code
     │   │   ├── assets/
     │   │   │   └── css/
-    │   │   │       ├── Dashboard.module.css, etc.
+    │   │   │       ├── Home.module.css, etc.
     │   │   │       └── [other .module.css files]
     │   │   │
     │   │   ├── components/
-    │   │   │   ├── PlanetCard.jsx, etc.
+    │   │   │   ├── LoginForm.jsx, etc.
     │   │   │   └── [other component .jsx files]
     │   │   │
     │   │   ├── pages/

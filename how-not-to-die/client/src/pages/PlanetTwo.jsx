@@ -2,13 +2,22 @@
 // Second planet details + logs
 
 import React from 'react';
+import VeraQuote from '../components/VeraQuote';
+import PersonalLogs from './PersonalLogs';
+import VeraPlanetMessage from '../components/VeraPlanetMessage';
 
 const PlanetTwo = () => {
   return (
-    <>
-      <h2>Welcome, Commander</h2>
-      <p>VERA is watching...</p>
-    </>
+    <div>
+      <h1>Welcome to the Cloudy Mountain Planet</h1>
+
+        <VeraQuote />
+
+        <VeraPlanetMessage />
+
+        <PersonalLogs />
+    </div>
+    
   );
 };
 

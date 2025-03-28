@@ -15,3 +15,5 @@ export default defineConfig({
   },
 });
 
+// FRONTEND IS RUNNING ON PORT 5173
+// BACKEND IS RUNNING ON PORT 3001

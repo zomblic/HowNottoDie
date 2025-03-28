@@ -43,15 +43,15 @@
 
   /* Planet One Spinner */
   @keyframes planetOneSpin {
-    0%    { background-image: url('/assets/images/planet-one/PlanOneSpin1.png'); }
-    12.5% { background-image: url('/assets/images/planet-one/PlanOneSpin2.png'); }
-    25%   { background-image: url('/assets/images/planet-one/PlanOneSpin3.png'); }
-    37.5% { background-image: url('/assets/images/planet-one/PlanOneSpin4.png'); }
-    50%   { background-image: url('/assets/images/planet-one/PlanOneSpin5.png'); }
-    62.5% { background-image: url('/assets/images/planet-one/PlanOneSpin6.png'); }
-    75%   { background-image: url('/assets/images/planet-one/PlanOneSpin7.png'); }
-    87.5% { background-image: url('/assets/images/planet-one/PlanOneSpin8.png'); }
-    100%  { background-image: url('/assets/images/planet-one/PlanOneSpin1.png'); }
+    0%    { background-image: url('/assets/images/planet-one/planet-spin/PlanOneSpin1.png'); }
+    12.5% { background-image: url('/assets/images/planet-one/planet-spin/PlanOneSpin2.png'); }
+    25%   { background-image: url('/assets/images/planet-one/planet-spin/PlanOneSpin3.png'); }
+    37.5% { background-image: url('/assets/images/planet-one/planet-spin/PlanOneSpin4.png'); }
+    50%   { background-image: url('/assets/images/planet-one/planet-spin/PlanOneSpin5.png'); }
+    62.5% { background-image: url('/assets/images/planet-one/planet-spin/PlanOneSpin6.png'); }
+    75%   { background-image: url('/assets/images/planet-one/planet-spin/PlanOneSpin7.png'); }
+    87.5% { background-image: url('/assets/images/planet-one/planet-spin/PlanOneSpin8.png'); }
+    100%  { background-image: url('/assets/images/planet-one/planet-spin/PlanOneSpin1.png'); }
   }
   
   .planetOneSpinner {
@@ -68,15 +68,15 @@
 
   /* Planet Two Spinner */
   @keyframes planetTwoSpin {
-    0%    { background-image: url('/assets/images/planet-two/PlanTwoSpin1.png'); }
-    12.5% { background-image: url('/assets/images/planet-two/PlanTwoSpin2.png'); }
-    25%   { background-image: url('/assets/images/planet-two/PlanTwoSpin3.png'); }
-    37.5% { background-image: url('/assets/images/planet-two/PlanTwoSpin4.png'); }
-    50%   { background-image: url('/assets/images/planet-two/PlanTwoSpin5.png'); }
-    62.5% { background-image: url('/assets/images/planet-two/PlanTwoSpin6.png'); }
-    75%   { background-image: url('/assets/images/planet-two/PlanTwoSpin7.png'); }
-    87.5% { background-image: url('/assets/images/planet-two/PlanTwoSpin8.png'); }
-    100%  { background-image: url('/assets/images/planet-two/PlanTwoSpin1.png'); }
+    0%    { background-image: url('/assets/images/planet-two/planet-spin/PlanTwoSpin1.png'); }
+    12.5% { background-image: url('/assets/images/planet-two/planet-spin/PlanTwoSpin2.png'); }
+    25%   { background-image: url('/assets/images/planet-two/planet-spin/PlanTwoSpin3.png'); }
+    37.5% { background-image: url('/assets/images/planet-two/planet-spin/PlanTwoSpin4.png'); }
+    50%   { background-image: url('/assets/images/planet-two/planet-spin/PlanTwoSpin5.png'); }
+    62.5% { background-image: url('/assets/images/planet-two/planet-spin/PlanTwoSpin6.png'); }
+    75%   { background-image: url('/assets/images/planet-two/planet-spin/PlanTwoSpin7.png'); }
+    87.5% { background-image: url('/assets/images/planet-two/planet-spin/PlanTwoSpin8.png'); }
+    100%  { background-image: url('/assets/images/planet-two/planet-spin/PlanTwoSpin1.png'); }
   }
   
   .planetTwoSpinner {
@@ -93,15 +93,15 @@
 
   /* Planet Three Spinner */
   @keyframes planetThreeSpin {
-    0%    { background-image: url('/assets/images/planet-three/PlanThreeSpin1.png'); }
-    12.5% { background-image: url('/assets/images/planet-three/PlanThreeSpin2.png'); }
-    25%   { background-image: url('/assets/images/planet-three/PlanThreeSpin3.png'); }
-    37.5% { background-image: url('/assets/images/planet-three/PlanThreeSpin4.png'); }
-    50%   { background-image: url('/assets/images/planet-three/PlanThreeSpin5.png'); }
-    62.5% { background-image: url('/assets/images/planet-three/PlanThreeSpin6.png'); }
-    75%   { background-image: url('/assets/images/planet-three/PlanThreeSpin7.png'); }
-    87.5% { background-image: url('/assets/images/planet-three/PlanThreeSpin8.png'); }
-    100%  { background-image: url('/assets/images/planet-three/PlanThreeSpin1.png'); }
+    0%    { background-image: url('/assets/images/planet-three/planet-spin/PlanThreeSpin1.png'); }
+    12.5% { background-image: url('/assets/images/planet-three/planet-spin/PlanThreeSpin2.png'); }
+    25%   { background-image: url('/assets/images/planet-three/planet-spin/PlanThreeSpin3.png'); }
+    37.5% { background-image: url('/assets/images/planet-three/planet-spin/PlanThreeSpin4.png'); }
+    50%   { background-image: url('/assets/images/planet-three/planet-spin/PlanThreeSpin5.png'); }
+    62.5% { background-image: url('/assets/images/planet-three/planet-spin/PlanThreeSpin6.png'); }
+    75%   { background-image: url('/assets/images/planet-three/planet-spin/PlanThreeSpin7.png'); }
+    87.5% { background-image: url('/assets/images/planet-three/planet-spin/PlanThreeSpin8.png'); }
+    100%  { background-image: url('/assets/images/planet-three/planet-spin/PlanThreeSpin1.png'); }
   }
   
   .planetThreeSpinner {

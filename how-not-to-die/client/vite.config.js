@@ -6,8 +6,10 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': 'http://localhost:3000', // REPLACE WITH WHATEVER PORT BACKEND IS USING /Alexis
+      '/api': 'http://localhost:3001', 
     },
   },
 });
 
+// FRONTEND IS RUNNING ON PORT 5173
+// BACKEND IS RUNNING ON PORT 3001

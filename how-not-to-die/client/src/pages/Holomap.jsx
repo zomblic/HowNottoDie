@@ -10,7 +10,7 @@ const Holomap = () => {
   return (
     <div
       className={styles.holomapWrapper}
-      style={{ backgroundImage: `url(/images/unnamed.jpg)` }}
+      style={{ backgroundImage: `url(/assets/images/GalaxyMapPixel.png)` }}
     >
       {/* Clickable planets */}
       <button
@@ -22,7 +22,7 @@ const Holomap = () => {
       </button>
       <button
         className={styles.planet}
-        style={{ top: '50%', left: '50%' }}
+        style={{ top: '50%', left: '45%' }}
         onClick={() => navigate('/planettwo')}
       >
         Planet Two
@@ -34,6 +34,30 @@ const Holomap = () => {
       >
         Planet Three
       </button>
+
+      {/* Spinning Planet One */}
+      <div
+        className={styles.planetOneSpinner}
+        style={{ top: '20%', left: '20.5%' }}
+        onClick={() => navigate('/planetone')}
+        title="Planet One"
+      />
+
+      {/* Spinning Planet Two */}
+      <div
+        className={styles.planetTwoSpinner}
+        style={{ top: '35%', left: '45.5%' }}
+        onClick={() => navigate('/planetone')}
+        title="Planet Two"
+      />
+
+      {/* Spinning Planet Three */}
+      <div
+        className={styles.planetThreeSpinner}
+        style={{ top: '50%', left: '73.5%' }}
+        onClick={() => navigate('/planetone')}
+        title="Planet Three"
+      />
 
       {/* Return to console */}
       <button className={styles.backButton} onClick={() => navigate('/planettravel')}>

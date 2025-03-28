@@ -47,7 +47,7 @@ const Holomap = () => {
       <div
         className={styles.planetTwoSpinner}
         style={{ top: '35%', left: '45.5%' }}
-        onClick={() => navigate('/planetwo')}
+        onClick={() => navigate('/planettwo')}
         title="Planet Two"
       />
 
@@ -55,7 +55,7 @@ const Holomap = () => {
       <div
         className={styles.planetThreeSpinner}
         style={{ top: '50%', left: '73.5%' }}
-        onClick={() => navigate('/planethree')}
+        onClick={() => navigate('/planetthree')}
         title="Planet Three"
       />
 

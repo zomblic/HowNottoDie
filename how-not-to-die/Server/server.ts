@@ -1,37 +1,72 @@
 import express from 'express';
-import { Pool } from 'pg';
+import { Sequelize, DataTypes, Model } from 'sequelize';
+//import cors from 'cors';
 
 const app = express();
-const pool = new Pool({
-  user: 'your_db_user',
+const PORT = 3001;
+
+//app.use(cors());
+app.use(express.json());
+
+// Initialize Sequelize with PostgreSQL
+const sequelize = new Sequelize('process.env.DB_NAME', 'process.env.DB_USER', 'process.env.DB_PASSWORD', {
   host: 'localhost',
-  database: 'planetary',
-  password: 'your_db_password',
-  port: 5432,
+  dialect: 'postgres',
 });
 
-app.get('/api/planets', async (_, res) => {
+// Define Planet model
+class Planet extends Model {}
+Planet.init(
+  {
+    planet_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    planet_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    flora_name: {
+      type: DataTypes.STRING,
+    },
+    fauna_name: {
+      type: DataTypes.STRING,
+    },
+    planet_description: {
+      type: DataTypes.TEXT,
+    },
+    hostility: {
+      type: DataTypes.STRING,
+    },
+    exploration: {
+      type: DataTypes.STRING,
+    },
+  },
+  {
+    sequelize,
+    modelName: 'Planet',
+    tableName: 'planets',
+    timestamps: false,
+  }
+);
+
+// Test database connection
+sequelize.authenticate()
+  .then(() => console.log('Connected to PostgreSQL via Sequelize'))
+  .catch((err) => console.error('Unable to connect to database:', err));
+
+// API route to fetch planets
+app.get('/api/planets', async (req, res) => {
   try {
-    const result = await pool.query(`
-      SELECT 
-        planet.id AS planet_id, 
-        planet.name AS planet_name, 
-        planet.description AS planet_description, 
-        planet.hostility, 
-        planet.exploration,
-        flora.name AS flora_name,
-        fauna.name AS fauna_name
-      FROM planet
-      LEFT JOIN flora ON flora.planet_id = planet.id
-      LEFT JOIN fauna ON fauna.planet_id = planet.id
-    `);
-    res.json(result.rows);
-  } catch (err) {
-    console.error(err);
-    res.status(500).send('Server error');
+    const planets = await Planet.findAll();
+    res.json(planets);
+  } catch (error) {
+    console.error('Error fetching planets:', error);
+    res.status(500).json({ error: 'Internal server error' });
   }
 });
 
-app.listen(3001, () => {
-  console.log('Server running on http://localhost:3001');
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
 });

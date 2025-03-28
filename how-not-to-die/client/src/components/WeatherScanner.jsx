@@ -32,7 +32,7 @@ const WeatherScanner = ({ isOpen, onClose }) => {
       <div className={styles.modalContent}>
         <button className={styles.closeButton} onClick={onClose}>✖</button>
         <header className={styles.header}>
-          <h1>🌤️ SkyWatch - Planetary Weather Scanner</h1>
+          <h1>SkyWatch - Planetary Weather Scanner</h1>
         </header>
 
         <div className={styles.container}>

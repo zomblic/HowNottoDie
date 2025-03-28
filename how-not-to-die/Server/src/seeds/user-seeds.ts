@@ -8,3 +8,5 @@ const seedUsers = async () => {
 };
 
 seedUsers().then(() => console.log('Users seeded'));
+
+export { seedUsers }; // Exporting the seedUsers function for use in other files

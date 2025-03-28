@@ -1,6 +1,9 @@
 // PlanetOne.jsx
 // file path: how-not-to-die/client/src/pages/PlanetOne.jsx
 
+// PlanetOne.jsx
+// file path: how-not-to-die/client/src/pages/PlanetOne.jsx
+
 import React, { useState } from 'react';
 import styles from '../assets/css/PlanetOne.module.css'; // CSS module for layout/styling
 import VeraPlanetMessage from '../components/VeraPlanetMessage'; // VERA sass
@@ -11,8 +14,8 @@ import { useNavigate } from 'react-router-dom';
 const PlanetOne = () => {
   const navigate = useNavigate();
 
-  // Local log state (could be shared in context or lifted higher later)
   const [logs, setLogs] = useState([]);
+  const [showWeatherScanner, setShowWeatherScanner] = useState(false);
 
   const handleSaveLog = (newLog) => {
     const enrichedLog = {
@@ -32,31 +35,46 @@ const PlanetOne = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        position: 'relative', // enable HUD positioning
+        position: 'relative',
         overflow: 'hidden',
       }}
     >
-      {/* HUD Overlay - sits behind all content */}
+      {/* HUD Overlay - sits behind all content but in front of the background */}
       <div className={styles.hudOverlay} />
-
-      {/* Randomized AI Quote */}
-      <VeraPlanetMessage />
 
       {/* Planet content layout */}
       <section className={styles.content}>
-        <h1 className={styles.title}>🌑 Planet One: The Shrouded Expanse</h1>
-
-        {/* Weather Scanner */}
-        <WeatherScanner planetId={1} />
+        <div className={styles.titleBox}>
+          <h1 className={styles.title}>-—-  Planet:  Doubt  -—-</h1>
+        </div>
 
         {/* Personal Log Tool */}
         <OnSitePersonalLog planetId={1} onSave={handleSaveLog} />
-      </section>
 
-      {/* Back to Dashboard */}
-      <button className={styles.backButton} onClick={() => navigate('/dashboard')}>
-        ↩ Return to Ship
-      </button>
+        {/* Weather Scanner Tool */}
+        <button
+          className={styles.skyWatchButton}
+          onClick={() => setShowWeatherScanner(true)}
+        >
+          SkyWatch
+        </button>
+
+        <WeatherScanner
+          isOpen={showWeatherScanner}
+          onClose={() => setShowWeatherScanner(false)}
+        />
+
+        {/* Return To Ship */}
+        <button
+          className={styles.returnButton}
+          onClick={() => navigate('/dashboard')}
+        >
+          ↩ Return to Ship
+        </button>
+
+        {/* Add code below this line: VERA message under return button */}
+        <VeraPlanetMessage />
+      </section>
     </div>
   );
 };

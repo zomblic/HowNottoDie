@@ -4,7 +4,7 @@
 
 .wrapper {
     position: fixed;
-    top: 6rem; /* lower than VERA's alert */
+    top: 6rem; 
     left: 2rem;
     z-index: 1000;
     text-align: left;

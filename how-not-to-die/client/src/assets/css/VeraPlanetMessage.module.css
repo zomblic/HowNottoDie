@@ -48,7 +48,7 @@
 /* new message box */
   .inlineMessageBox {
     margin-top: 1rem;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: 1px solid #00ffe1;
     border-radius: 8px;
@@ -62,7 +62,7 @@
 /* no new messages */
 .noNewMessageText {
   margin-top: 1rem;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border: 1px solid #00ffe1;
   border-radius: 8px;

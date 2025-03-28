@@ -1,11 +1,31 @@
 // file path: how-not-to-die/client/src/components/WeatherScanner.jsx
 // "Glitchy" weather tool component (shows weather on earth, connects to weather API)
 
-import React from 'react';
+// file path: how-not-to-die/client/src/components/WeatherScanner.jsx
+
+import React, { useState } from 'react';
 import styles from '../assets/css/WeatherScanner.module.css';
 
 const WeatherScanner = ({ isOpen, onClose }) => {
+  const [showPreview, setShowPreview] = useState(false);
+
   if (!isOpen) return null;
+
+  const mockWeather = {
+    city: 'San Diego',
+    temperature: '72°F',
+    wind: '5 MPH',
+    humidity: '60%',
+    icon: '☀️',
+  };
+
+  const mockForecast = [
+    { day: 'Mon', temp: '70°F', icon: '☀️' },
+    { day: 'Tue', temp: '68°F', icon: '🌤️' },
+    { day: 'Wed', temp: '65°F', icon: '🌧️' },
+    { day: 'Thu', temp: '67°F', icon: '☁️' },
+    { day: 'Fri', temp: '69°F', icon: '🌤️' },
+  ];
 
   return (
     <div className={styles.modalOverlay}>
@@ -26,22 +46,41 @@ const WeatherScanner = ({ isOpen, onClose }) => {
               />
               <button className={styles.searchButton} type="submit">Search</button>
             </form>
+
+            <button
+              className={styles.previewButton}
+              onClick={() => setShowPreview(true)}
+            >
+              🔍 Preview Mock Data
+            </button>
+
             <div className={styles.history}>
               {/* Search history will go here */}
             </div>
           </aside>
 
           <main className={styles.weatherInfo}>
-            <section className={styles.today}>
-              <h2>Search for a city!</h2>
-              <img className={styles.weatherImg} alt="weather icon" />
-              <p>Temperature: °F</p>
-              <p>Wind: MPH</p>
-              <p>Humidity: %</p>
-            </section>
-            <section className={styles.forecast}>
-              {/* 5-day forecast cards will go here */}
-            </section>
+            {showPreview && (
+              <>
+                <section className={styles.today}>
+                  <h2>Weather in {mockWeather.city}</h2>
+                  <p>{mockWeather.icon}</p>
+                  <p>Temperature: {mockWeather.temperature}</p>
+                  <p>Wind: {mockWeather.wind}</p>
+                  <p>Humidity: {mockWeather.humidity}</p>
+                </section>
+
+                <section className={styles.forecast}>
+                  {mockForecast.map((day, index) => (
+                    <div key={index} className={styles.forecastCard}>
+                      <p>{day.day}</p>
+                      <p>{day.icon}</p>
+                      <p>{day.temp}</p>
+                    </div>
+                  ))}
+                </section>
+              </>
+            )}
           </main>
         </div>
       </div>

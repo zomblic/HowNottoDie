@@ -1,3 +1,3 @@
-import authRoutes from './auth-routes';
-import userRoutes from './user-routes';
+import authRoutes from './auth-routes.js';
+import userRoutes from '../routes/api/user-routes.js';
 export { authRoutes, userRoutes };

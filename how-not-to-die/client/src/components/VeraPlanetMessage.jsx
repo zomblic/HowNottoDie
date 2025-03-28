@@ -17,6 +17,7 @@ const VeraPlanetMessage = () => {
   const [quote, setQuote] = useState('');
   const [messageReady, setMessageReady] = useState(false);
   const [messageViewed, setMessageViewed] = useState(false);
+  const [noNewMessage, setNoNewMessage] = useState(false);
 
   useEffect(() => {
     const randomIndex = Math.floor(Math.random() * veraPlanetMessages.length);
@@ -27,27 +28,35 @@ const VeraPlanetMessage = () => {
   }, []);
 
   const handleOpenMessage = () => {
-    setMessageViewed(true);
+    if (messageReady && !messageViewed) {
+      setMessageViewed(true);
+      setNoNewMessage(false);
+    } else {
+      setNoNewMessage(true);
+      setTimeout(() => setNoNewMessage(false), 2000);
+    }
   };
 
   const handleCloseMessage = () => {
-    setMessageViewed(false);    // Hides the message box
-    setMessageReady(false);     // Prevents the notification from blinking again
+    setMessageViewed(false);
+    setMessageReady(false);
   };
 
-  const showNotification = messageReady && !messageViewed;
-  const showMessageBox = messageViewed;
-
   return (
-    <>
-      {showNotification && (
-        <div className={`${styles.notification} ${styles.blink}`} onClick={handleOpenMessage}>
-          🔔 New Message from VERA
-        </div>
+    <div className={styles.veraWrapper}>
+      <div
+        className={`${styles.notification} ${messageReady && !messageViewed ? styles.blink : ''}`}
+        onClick={handleOpenMessage}
+      >
+        🔔 New Message from VERA
+      </div>
+
+      {noNewMessage && (
+        <div className={styles.noNewMessageText}>No new messages.</div>
       )}
 
-      {showMessageBox && (
-        <div className={styles.messageBox}>
+      {messageViewed && (
+        <div className={styles.inlineMessageBox}>
           <div className={styles.header}>
             VERA Message
             <button className={styles.closeBtn} onClick={handleCloseMessage}>
@@ -57,8 +66,9 @@ const VeraPlanetMessage = () => {
           <p className={styles.messageText}>🗨️ "{quote}"</p>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
 export default VeraPlanetMessage;
+

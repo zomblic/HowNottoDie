@@ -29,6 +29,7 @@ const OnSitePersonalLog = ({ planetId, onSave }) => {
           log={{ title: '', content: '' }}
           onClose={() => setShowModal(false)}
           onSave={handleSave}
+          variant="planet" // ✅ Add this line to apply reversed styles
         />
       )}
     </div>

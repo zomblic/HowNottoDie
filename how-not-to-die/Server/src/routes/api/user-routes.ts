@@ -1,15 +1,16 @@
 import express from 'express';
-import User from './user';
-import { verifyToken } from './auth';
+import User from '../../models/user';
+import { verifyToken } from '../../middleware/auth';
 
 const router = express.Router();
 
-router.get('/', async (req, res) => {
+router.get('/', verifyToken, async (_req, res) => {
   const users = await User.findAll();
   res.json(users);
 });
 
-router.get('/:id', async (req, res) => {
+
+router.get('/:id', verifyToken, async (req, res) => {
   const user = await User.findByPk(req.params.id);
   if (user) {
     res.json(user);

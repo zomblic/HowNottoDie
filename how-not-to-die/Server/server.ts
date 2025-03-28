@@ -57,7 +57,7 @@ sequelize.authenticate()
   .catch((err) => console.error('Unable to connect to database:', err));
 
 // API route to fetch planets
-app.get('/api/planets', async (req, res) => {
+app.get('/api/planets', async (_req, res) => {
   try {
     const planets = await Planet.findAll();
     res.json(planets);

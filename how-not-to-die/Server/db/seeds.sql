@@ -21,14 +21,20 @@ VALUES
 INSERT INTO fauna (name, description, planet_id)
 VALUES
 ( 'rUN', 'RuN rUn', 1),
-( 'Fish', 'I think it is a fish, it is long and shiny', 2),
-('Drawf?', 'that is what it looks like?', 3); 
+('Mimics', 'In the shape of random containers, they sometimes appear to carry items or loot. Be wary, it is merely a trick.', 2)
+( 'Fish', 'I think it is a fish, it is long and shiny', 3),
+('Drawf?', 'that is what it looks like?', 2); 
+('cONnectioN InteRRUpted', 'Connection Interrrupted', 1);
+
 
 INSERT INTO unexplained (name, description, planet_id)
 VALUES
 ('The Shriek', 'If you hear it, it is too late.', 1),
 ('The Dungeon Lot', 'A local said there is a dungeon that contains much loot, but I dare not go near the treasure chests.', 2),
-('The Shining', 'It shines from so far away. All that work make us...', 3);
+('The Shining', 'It shines from so far away. All that work make us...', 3)
+('Missing Ship', 'Vera said that once a shuffle just simply vanished before it landed. In single glup.', 3);
+('The Tree Folk', 'Vera mentioned that once a pilot entered the forest, and never came back, but sometimes you can still hear their screams.', 2);
+('Silence', 'FILE CORRUPTED. FILE CORRUPTED.')
 
 
 

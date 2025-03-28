@@ -1,4 +1,4 @@
-//Johnny's code
+//Johnny's code - needs review
 import express from 'express';
 import User from '../../models/user.js'; // Correctly import the User model
 

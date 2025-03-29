@@ -2,8 +2,9 @@
 // View/edit user’s own logs
 
 import React, { useState } from 'react';
-import styles from '../assets/css/PersonalLogs.module.css';
-import EditLogModal from '../components/EditLogModal';
+import styles from '../assets/css/personal-logs/PersonalLogs.module.css';
+import EditLogModal from '../components/personal-logs/EditLogModal';
+import VeraPersonalLogsQuote from '../components/vera-quotes/VeraPersonalLogsQuote'; 
 
 const PersonalLogs = () => {
   const [logs, setLogs] = useState([
@@ -36,23 +37,25 @@ const PersonalLogs = () => {
       };
       setLogs([...logs, newLog]);
     }
-  
+
     setEditingLog(null);
   };
-  
+
   const handleDeleteLog = (idToDelete) => {
     const filteredLogs = logs.filter(log => log.id !== idToDelete);
     setLogs(filteredLogs);
   };
-  
 
   return (
     <div className={styles.container}>
       <h2>Personal Logs</h2>
-        <button className={styles.newLogButton} onClick={() => setEditingLog({ title: '', content: '' })}>
-          + New Log
-        </button>
-        <div className={styles.logList}>
+      <VeraPersonalLogsQuote /> 
+
+      <button className={styles.newLogButton} onClick={() => setEditingLog({ title: '', content: '' })}>
+        + New Log
+      </button>
+
+      <div className={styles.logList}>
         {logs.map((log) => (
           <div key={log.id} className={styles.logCard}>
             <h3>{log.title}</h3>

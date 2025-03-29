@@ -11,3 +11,5 @@ const VoteButtons = () => {
 
 
 export default VoteButtons;
+
+// this is for people to vote on entires, but idk if we are going to have time to implement this feature.

@@ -1,61 +1,74 @@
-// file path: how-not-to-die/client/src/pages/Holomap.jsx
+// file path: how-not-to-die/src/pages/Holomap.jsx
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from '../assets/css/Holomap.module.css';
+import styles from '../assets/css/galaxy-map/Holomap.module.css';
+import PlanetCard from '../components/holomap/PlanetCard';
+import VeraHolomapQuote from '../components/vera-quotes/VeraHolomapQuote';
 
 const Holomap = () => {
   const navigate = useNavigate();
+  const [selectedPlanet, setSelectedPlanet] = useState(null);
+
+  const handlePlanetClick = (planetKey) => {
+    setSelectedPlanet(planetKey);
+  };
+
+  const handleCloseCard = () => {
+    setSelectedPlanet(null);
+  };
+
+  const handleTravelClick = (planetKey) => {
+    navigate(`/travel?planet=${planetKey}`);
+  };
 
   return (
     <div
       className={styles.holomapWrapper}
       style={{ backgroundImage: `url(/assets/images/GalaxyMapPixel.png)` }}
     >
+      <VeraHolomapQuote />
+
       {/* Clickable planets */}
       <button
         className={styles.planet}
         style={{ top: '30%', left: '20%' }}
-        onClick={() => navigate('/planetone')}
+        onClick={() => handlePlanetClick('planetone')}
       >
-        Planet One
+        Doubt
       </button>
       <button
         className={styles.planet}
         style={{ top: '50%', left: '45%' }}
-        onClick={() => navigate('/planettwo')}
+        onClick={() => handlePlanetClick('planettwo')}
       >
-        Planet Two
+        Brune
       </button>
       <button
         className={styles.planet}
         style={{ top: '70%', left: '75%' }}
-        onClick={() => navigate('/planethree')}
+        onClick={() => handlePlanetClick('planethree')}
       >
-        Planet Three
+        Ocean 12B
       </button>
 
-      {/* Spinning Planet One */}
+      {/* Spinning Planets */}
       <div
         className={styles.planetOneSpinner}
         style={{ top: '20%', left: '20.5%' }}
-        onClick={() => navigate('/planetone')}
+        onClick={() => handlePlanetClick('planetone')}
         title="Planet One"
       />
-
-      {/* Spinning Planet Two */}
       <div
         className={styles.planetTwoSpinner}
         style={{ top: '35%', left: '45.5%' }}
-        onClick={() => navigate('/planettwo')}
+        onClick={() => handlePlanetClick('planettwo')}
         title="Planet Two"
       />
-
-      {/* Spinning Planet Three */}
       <div
         className={styles.planetThreeSpinner}
         style={{ top: '50%', left: '73.5%' }}
-        onClick={() => navigate('/planetthree')}
+        onClick={() => handlePlanetClick('planethree')}
         title="Planet Three"
       />
 
@@ -63,6 +76,15 @@ const Holomap = () => {
       <button className={styles.backButton} onClick={() => navigate('/planettravel')}>
         ↩ Return to Console
       </button>
+
+      {/* Show Planet Card */}
+      {selectedPlanet && (
+        <PlanetCard
+          planetKey={selectedPlanet}
+          onTravel={() => handleTravelClick(selectedPlanet)}
+          onClose={handleCloseCard}
+        />
+      )}
     </div>
   );
 };

@@ -1,7 +1,7 @@
 // file path: src/pages/Dashboard.jsx
 
 import React from 'react';
-import VeraQuote from '../components/VeraQuote';
+import VeraQuote from '../components/vera-quotes/VeraQuote';
 
 const Dashboard = () => {
   return (

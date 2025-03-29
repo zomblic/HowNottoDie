@@ -1,10 +1,7 @@
 // file path: how-not-to-die/client/src/components/PlanetCard.jsx
 // Card showing a preview of each planet in the travel hub
 
-// file path: how-not-to-die/client/src/components/PlanetCard.jsx
-// Card showing a preview of each planet in the travel hub
-
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../assets/css/PlanetCard.module.css';
 
 const planetInfo = {
@@ -32,6 +29,7 @@ They’re still here."`,
 };
 
 const PlanetCard = ({ planetKey, onTravel, onClose }) => {
+  const [showRecording, setShowRecording] = useState(false);
   const planet = planetInfo[planetKey];
 
   if (!planet) return null;
@@ -42,19 +40,44 @@ const PlanetCard = ({ planetKey, onTravel, onClose }) => {
         <button className={styles.closeButton} onClick={onClose}>×</button>
         <h2>{planet.name}</h2>
         <img src={planet.image} alt={planet.name} className={styles.planetImage} />
-        
-        {/* break description into paragraphs */}
+
+        {/* Render planet description as paragraphs */}
         {planet.description.split('\n\n').map((paragraph, idx) => (
           <p key={idx}>{paragraph}</p>
         ))}
 
-        <button className={styles.travelButton} onClick={onTravel}>
-          Travel to Planet
-        </button>
+        {/* Extra message and recording for Ocean 12B */}
+        {planetKey === 'planethree' && (
+          <>
+            <p><em>A recording accompanied the distress beacon.</em></p>
+            <div className={styles.buttonGroup}>
+              <button
+                className={styles.travelButton}
+                onClick={() => setShowRecording(prev => !prev)}
+              >
+                {showRecording ? 'Hide Recording' : 'Play Recording'}
+              </button>
+            </div>
+            {showRecording && (
+              <video
+                className={styles.videoPlayer}
+                src="/assets/videos/distress-recording.mp4"
+                controls
+                autoPlay
+              />
+            )}
+          </>
+        )}
+
+        {/* Always render travel button with spacing */}
+        <div className={styles.buttonGroup}>
+          <button className={styles.travelButton} onClick={onTravel}>
+            Travel to Planet
+          </button>
+        </div>
       </div>
     </div>
   );
 };
 
 export default PlanetCard;
-

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import styles from '../assets/css/TravelAnimation.module.css';
+import styles from '../assets/css/galaxy-map/TravelAnimation.module.css';
 
 const TravelAnimation = () => {
   const navigate = useNavigate();

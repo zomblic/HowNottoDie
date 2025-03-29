@@ -1,12 +1,13 @@
+// file path: how-not-to-die/src/pages/Holomap.jsx
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from '../assets/css/Holomap.module.css';
-import PlanetCard from '../components/PlanetCard'; // Add this line
+import styles from '../assets/css/galaxy-map/Holomap.module.css';
+import PlanetCard from '../components/holomap/PlanetCard';
+import VeraHolomapQuote from '../components/vera-quotes/VeraHolomapQuote';
 
 const Holomap = () => {
   const navigate = useNavigate();
-
-  // Add code below this line: state for selected planet
   const [selectedPlanet, setSelectedPlanet] = useState(null);
 
   const handlePlanetClick = (planetKey) => {
@@ -26,8 +27,9 @@ const Holomap = () => {
       className={styles.holomapWrapper}
       style={{ backgroundImage: `url(/assets/images/GalaxyMapPixel.png)` }}
     >
+      <VeraHolomapQuote />
+
       {/* Clickable planets */}
-      {/* Planet One "Doubt" */}
       <button
         className={styles.planet}
         style={{ top: '30%', left: '20%' }}
@@ -40,7 +42,6 @@ const Holomap = () => {
         style={{ top: '50%', left: '45%' }}
         onClick={() => handlePlanetClick('planettwo')}
       >
-      {/* Planet Two "Brune" */}
         Brune
       </button>
       <button
@@ -48,27 +49,22 @@ const Holomap = () => {
         style={{ top: '70%', left: '75%' }}
         onClick={() => handlePlanetClick('planethree')}
       >
-      {/* Planet Three "Ocean 12B" */}
         Ocean 12B
       </button>
 
-      {/* Spinning Planet One */}
+      {/* Spinning Planets */}
       <div
         className={styles.planetOneSpinner}
         style={{ top: '20%', left: '20.5%' }}
         onClick={() => handlePlanetClick('planetone')}
         title="Planet One"
       />
-
-      {/* Spinning Planet Two */}
       <div
         className={styles.planetTwoSpinner}
         style={{ top: '35%', left: '45.5%' }}
         onClick={() => handlePlanetClick('planettwo')}
         title="Planet Two"
       />
-
-      {/* Spinning Planet Three */}
       <div
         className={styles.planetThreeSpinner}
         style={{ top: '50%', left: '73.5%' }}

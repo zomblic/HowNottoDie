@@ -1,20 +1,28 @@
-import express from 'express';
-import { Sequelize, DataTypes, Model } from 'sequelize';
+import express from "express";
+import { Sequelize, DataTypes, Model } from "sequelize";
 //import cors from 'cors';
+
+import dotenv from "dotenv";
+
+// Load .env config
+dotenv.config();
 
 const app = express();
 const PORT = 3001;
-
-
 
 //app.use(cors());
 app.use(express.json());
 
 // Initialize Sequelize with PostgreSQL
-const sequelize = new Sequelize('process.env.DB_NAME', 'process.env.DB_USER', 'process.env.DB_PASSWORD', {
-  host: 'localhost',
-  dialect: 'postgres',
-});
+const sequelize = new Sequelize(
+  process.env.DB_NAME || "",
+  process.env.DB_USER || "",
+  process.env.DB_PASSWORD || "",
+  {
+    host: "localhost",
+    dialect: "postgres",
+  }
+);
 
 // Define Planet model
 class Planet extends Model {}
@@ -47,25 +55,26 @@ Planet.init(
   },
   {
     sequelize,
-    modelName: 'Planet',
-    tableName: 'planets',
+    modelName: "Planet",
+    tableName: "planets",
     timestamps: false,
   }
 );
 
 // Test database connection
-sequelize.authenticate()
-  .then(() => console.log('Connected to PostgreSQL via Sequelize'))
-  .catch((err) => console.error('Unable to connect to database:', err));
+sequelize
+  .authenticate()
+  .then(() => console.log("Connected to PostgreSQL via Sequelize"))
+  .catch((err) => console.error("Unable to connect to database:", err));
 
 // API route to fetch planets
-app.get('/api/planets', async (_req, res) => {
+app.get("/api/planets", async (_req, res) => {
   try {
     const planets = await Planet.findAll();
     res.json(planets);
   } catch (error) {
-    console.error('Error fetching planets:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    console.error("Error fetching planets:", error);
+    res.status(500).json({ error: "Internal server error" });
   }
 });
 

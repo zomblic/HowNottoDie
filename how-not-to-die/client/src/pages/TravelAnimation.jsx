@@ -34,7 +34,12 @@ const TravelAnimation = () => {
         clearInterval(interval);
         setShowStatic(true); // start static effect
         setTimeout(() => {
-          navigate(`/${planetKey}`);
+          // Add condition below to handle Planet 3 redirect:
+          if (planetKey === 'planethree') {
+            navigate('/shuttlebreak');
+          } else {
+            navigate(`/${planetKey}`);
+          }
         }, 1200); // total delay: glitch + transition
       } else {
         setCurrentFrame(frame);

@@ -10,15 +10,17 @@ import SurvivalGuide from '../pages/SurvivalGuide';
 import PersonalLogs from '../pages/PersonalLogs';
 import PlanetTravel from '../pages/PlanetTravel';
 import Holomap from '../pages/Holomap';
+import TravelAnimation from '../pages/TravelAnimation';
 import PlanetOne from '../pages/PlanetOne';
 import PlanetTwo from '../pages/PlanetTwo';
 
 const LayoutRouter = () => {
   const location = useLocation();
   const isPlanetView =
+    location.pathname === '/holomap' ||
+    location.pathname === '/travel' ||
     location.pathname === '/planetone' ||
-    location.pathname === '/planettwo' ||
-    location.pathname === '/holomap';
+    location.pathname === '/planettwo';
 
   return (
     <>
@@ -27,6 +29,7 @@ const LayoutRouter = () => {
           <Route path="/planetone" element={<PlanetOne />} />
           <Route path="/planettwo" element={<PlanetTwo />} />
           <Route path="/holomap" element={<Holomap />} />
+          <Route path="/travel" element={<TravelAnimation />} />
         </Routes>
       ) : (
         <ConsoleLayout>

@@ -1,7 +1,7 @@
 import express from 'express';
 import bcrypt from 'bcrypt';
-import User from '../models/user';
-import { generateToken } from '../middleware/auth';
+import User from '../models/user.js';
+import { generateToken } from '../middleware/auth.js';
 const router = express.Router();
 router.post('/register', async (req, res) => {
     const { username, password } = req.body;

@@ -1,4 +1,4 @@
-import User from '../models/user';
+import User from '../models/user.js';
 const seedUsers = async () => {
     await User.bulkCreate([
         { username: 'admin', password: 'admin123' },
@@ -6,3 +6,4 @@ const seedUsers = async () => {
     ]);
 };
 seedUsers().then(() => console.log('Users seeded'));
+export { seedUsers }; // Exporting the seedUsers function for use in other files

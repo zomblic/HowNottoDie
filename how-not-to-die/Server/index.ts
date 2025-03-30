@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import authRoutes from './src/routes/auth-routes.js';
-import userRoutes from './src/routes//api/user-routes.js';
+import userRoutes from './src/routes/api/user-routes.js';
 import sequelize from './src/config/connection.js';
 
 dotenv.config();

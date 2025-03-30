@@ -5,10 +5,13 @@ import { useNavigate } from 'react-router-dom';
 import styles from '../assets/css/galaxy-map/Holomap.module.css';
 import PlanetCard from '../components/holomap/PlanetCard';
 import VeraHolomapQuote from '../components/vera-quotes/VeraHolomapQuote';
+import VeraNoTravelQuote from '../components/vera-quotes/VeraNoTravelQuote'; // Added for override modal
 
 const Holomap = () => {
   const navigate = useNavigate();
   const [selectedPlanet, setSelectedPlanet] = useState(null);
+  const [overrideStage, setOverrideStage] = useState(0);
+  const [showOverrideBox, setShowOverrideBox] = useState(false);
 
   const handlePlanetClick = (planetKey) => {
     setSelectedPlanet(planetKey);
@@ -19,7 +22,20 @@ const Holomap = () => {
   };
 
   const handleTravelClick = (planetKey) => {
-    navigate(`/travel?planet=${planetKey}`);
+    if (planetKey === 'planethree') {
+      setShowOverrideBox(true);
+      setOverrideStage(1);
+    } else {
+      navigate(`/travel?planet=${planetKey}`);
+    }
+  };
+
+  const handleOverrideClick = () => {
+    if (overrideStage < 3) {
+      setOverrideStage((prev) => prev + 1);
+    } else {
+      navigate('/shuttlebreak');
+    }
   };
 
   return (
@@ -84,6 +100,30 @@ const Holomap = () => {
           onTravel={() => handleTravelClick(selectedPlanet)}
           onClose={handleCloseCard}
         />
+      )}
+
+      {/* Override Modal */}
+      {showOverrideBox && (
+        <div className={styles.overrideModal}>
+          <div className={styles.overrideContent}>
+            <VeraNoTravelQuote stage={overrideStage} />
+            {overrideStage === 1 && (
+              <button onClick={handleOverrideClick}>
+                Override AI Concerns
+              </button>
+            )}
+            {overrideStage === 2 && (
+              <button onClick={handleOverrideClick}>
+                Force Travel
+              </button>
+            )}
+            {overrideStage === 3 && (
+              <button onClick={handleOverrideClick}>
+                Turn Off AI Safety Permissions & Force Override
+              </button>
+            )}
+          </div>
+        </div>
       )}
     </div>
   );

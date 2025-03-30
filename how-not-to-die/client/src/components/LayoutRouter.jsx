@@ -13,6 +13,12 @@ import Holomap from '../pages/Holomap';
 import TravelAnimation from '../pages/TravelAnimation';
 import PlanetOne from '../pages/PlanetOne';
 import PlanetTwo from '../pages/PlanetTwo';
+import ShuttleBreak from '../pages/ShuttleBreak';
+import LifeSupport from '../pages/ship-functions/LifeSupport';
+import Comms from '../pages/ship-functions/Comms';
+import ShipNav from '../pages/ship-functions/ShipNav';
+import Propulsion from '../pages/ship-functions/Propulsion';
+import EndDemo from '../pages/EndDemo';
 
 const LayoutRouter = () => {
   const location = useLocation();
@@ -20,7 +26,8 @@ const LayoutRouter = () => {
     location.pathname === '/holomap' ||
     location.pathname === '/travel' ||
     location.pathname === '/planetone' ||
-    location.pathname === '/planettwo';
+    location.pathname === '/planettwo' ||
+    location.pathname === '/enddemo';
 
   return (
     <>
@@ -30,6 +37,7 @@ const LayoutRouter = () => {
           <Route path="/planettwo" element={<PlanetTwo />} />
           <Route path="/holomap" element={<Holomap />} />
           <Route path="/travel" element={<TravelAnimation />} />
+          <Route path="/enddemo" element={<EndDemo />} />
         </Routes>
       ) : (
         <ConsoleLayout>
@@ -40,6 +48,11 @@ const LayoutRouter = () => {
             <Route path="/survivalguide" element={<SurvivalGuide />} />
             <Route path="/personallogs" element={<PersonalLogs />} />
             <Route path="/planettravel" element={<PlanetTravel />} />
+            <Route path="/shuttlebreak" element={<ShuttleBreak />} />
+            <Route path="/lifesupport" element={<LifeSupport />} />
+            <Route path="/comms" element={<Comms />} />
+            <Route path="/shipnav" element={<ShipNav />} />
+            <Route path="/propulsion" element={<Propulsion />} />
           </Routes>
         </ConsoleLayout>
       )}

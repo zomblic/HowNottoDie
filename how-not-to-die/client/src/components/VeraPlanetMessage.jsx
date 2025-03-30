@@ -9,6 +9,12 @@ const veraPlanetMessages = [
 'Ok we’ve arrived. Can we go back to the ship now? I’m bored.',
 'Scan complete. No hostiles in immediate area. Not like anyone survived long enough to find out.',
 'This is your new home. Bye Commander.',
+'For the most accurate weather, stick your head out of the airlock.',
+'Scans completed. Totally safe. No hostels in the immediate area. By immediate, I mean here.',
+'For the most accurate weather, stick your head out of the airlock.',
+'I say... let natural selection do it’s thing. Don’t worry, it’ll be quick.',
+'Do you have any doubts? Well, you should.'
+
 ];
 
 const veraPlanetMessage = () => {

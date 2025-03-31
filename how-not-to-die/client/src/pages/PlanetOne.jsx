@@ -1,18 +1,21 @@
 // PlanetOne.jsx
 // file path: how-not-to-die/client/src/pages/PlanetOne.jsx
 
-// PlanetOne.jsx
-// file path: how-not-to-die/client/src/pages/PlanetOne.jsx
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react'; // Added useEffect
 import styles from '../assets/css/on-planet/PlanetOne.module.css'; // CSS module for layout/styling
 import VeraPlanetMessage from '../components/vera-quotes/VeraPlanetMessage'; // VERA sass
 import OnSitePersonalLog from '../components/on-planet/OnSitePersonalLog'; // shared personal log tool
 import WeatherScanner from '../components/weather-scanner/WeatherScanner'; // glitchy weather scanner
 import { useNavigate } from 'react-router-dom';
+import { usePlanetTracker } from '../components/holomap/PlanetLockLogic'; // Track visited planets
 
 const PlanetOne = () => {
   const navigate = useNavigate();
+  const { markPlanetVisited } = usePlanetTracker(); // call to visitation logic
+
+  useEffect(() => {
+    markPlanetVisited('planetone'); // ✅ Mark as visited on load
+  }, []);
 
   const [logs, setLogs] = useState([]);
   const [showWeatherScanner, setShowWeatherScanner] = useState(false);
@@ -67,10 +70,11 @@ const PlanetOne = () => {
         {/* Return To Ship */}
         <button
           className={styles.returnButton}
-          onClick={() => navigate('/dashboard')}
-        >
+          onClick={() => navigate('/holomap')}
+          > 
           ↩ Return to Ship
         </button>
+
 
         {/* VERA message under return button */}
         <VeraPlanetMessage />

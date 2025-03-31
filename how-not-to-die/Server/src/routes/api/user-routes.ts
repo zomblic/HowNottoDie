@@ -4,13 +4,13 @@ import User from '../../models/user.js'; // Correctly import the User model
 
 const router = express.Router();
 
-router.post('/users', async (req, res) => {
+router.post('/users', async (req: express.Request, res: express.Response) => {
   try {
     const { username, email } = req.body; // Get user input from the request body
     const newUser = await User.create({ username, email }); // Save to the database
     res.status(201).json(newUser); // Respond with the created user
   } catch (error) {
-    res.status(500).json({ error: 'Failed to create user', details: error.message });
+    res.status(500).json({ error: 'Failed to create user', details: (error as Error).message });
   }
 });
 

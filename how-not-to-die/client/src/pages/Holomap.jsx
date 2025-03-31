@@ -5,13 +5,15 @@ import { useNavigate } from 'react-router-dom';
 import styles from '../assets/css/galaxy-map/Holomap.module.css';
 import PlanetCard from '../components/holomap/PlanetCard';
 import VeraHolomapQuote from '../components/vera-quotes/VeraHolomapQuote';
-import VeraNoTravelQuote from '../components/vera-quotes/VeraNoTravelQuote'; // Added for override modal
+import VeraNoTravelQuote from '../components/vera-quotes/VeraNoTravelQuote'; 
+import { usePlanetTracker } from '../components/holomap/PlanetLockLogic';
 
 const Holomap = () => {
   const navigate = useNavigate();
   const [selectedPlanet, setSelectedPlanet] = useState(null);
   const [overrideStage, setOverrideStage] = useState(0);
   const [showOverrideBox, setShowOverrideBox] = useState(false);
+  const { hasVisited, isPlanetThreeUnlocked } = usePlanetTracker();
 
   const handlePlanetClick = (planetKey) => {
     setSelectedPlanet(planetKey);
@@ -51,22 +53,24 @@ const Holomap = () => {
         style={{ top: '30%', left: '20%' }}
         onClick={() => handlePlanetClick('planetone')}
       >
-        Doubt
+        Doubt {hasVisited('planetone') && '✅'}
       </button>
       <button
         className={styles.planet}
         style={{ top: '50%', left: '45%' }}
         onClick={() => handlePlanetClick('planettwo')}
       >
-        Brune
+        Brune {hasVisited('planettwo') && '✅'}
       </button>
-      <button
-        className={styles.planet}
-        style={{ top: '70%', left: '75%' }}
-        onClick={() => handlePlanetClick('planethree')}
-      >
-        Ocean 12B
-      </button>
+      {isPlanetThreeUnlocked() && (
+        <button
+          className={styles.planet}
+          style={{ top: '70%', left: '75%' }}
+          onClick={() => handlePlanetClick('planethree')}
+        >
+          Ocean 12B {hasVisited('planethree') && '✅'}
+        </button>
+      )}
 
       {/* Spinning Planets */}
       <div
@@ -81,12 +85,14 @@ const Holomap = () => {
         onClick={() => handlePlanetClick('planettwo')}
         title="Planet Two"
       />
-      <div
-        className={styles.planetThreeSpinner}
-        style={{ top: '50%', left: '73.5%' }}
-        onClick={() => handlePlanetClick('planethree')}
-        title="Planet Three"
-      />
+      {isPlanetThreeUnlocked() && (
+        <div
+          className={styles.planetThreeSpinner}
+          style={{ top: '50%', left: '73.5%' }}
+          onClick={() => handlePlanetClick('planethree')}
+          title="Planet Three"
+        />
+      )}
 
       {/* Return to console */}
       <button className={styles.backButton} onClick={() => navigate('/planettravel')}>

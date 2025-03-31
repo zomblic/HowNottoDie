@@ -9,6 +9,7 @@ const quotes = [
   "If you ever wanted to replicate that titanic scene, I do have a recommended spot.",
   "The last pilot lasted 5 days, 3 hours and 42 minutes. I forgot the code to unlock the door.",
   "If you don't like cllimbing... why not cave? Lots of lot there. Becareful of treasure chest... they like to mimic.",
+
 ];
 
 const VeraBruneQuote = () => {

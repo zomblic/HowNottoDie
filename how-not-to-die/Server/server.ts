@@ -10,6 +10,8 @@ dotenv.config();
 const app = express();
 const PORT = 3001;
 
+
+
 //app.use(cors());
 app.use(express.json());
 
@@ -94,7 +96,7 @@ sequelize
   .catch((err) => console.error("Unable to connect to database:", err));
 
 // API route to fetch planets
-app.get("/api/planets", async (_req, res) => {
+app.get('/api/planets', async (_req, res) => {
   try {
     const planets = await Planet.findAll();
     res.json(planets);

@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 
 const quotes = [
+
   "Do you have any doubts? You should.",
   "Doubt. A lovely vacation spot, if you enjoy heatstroke, dehydration, and sunsets that make you question your existence.",
   "Surface scans show more sand than a self-respecting planet should legally have. Welcome to Doubt.",

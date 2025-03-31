@@ -28,22 +28,17 @@ const sequelize = new Sequelize(
 class Planet extends Model {}
 Planet.init(
   {
-    planet_id: {
+    id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
-    planet_name: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    flora_name: {
-      type: DataTypes.STRING,
-    },
-    fauna_name: {
-      type: DataTypes.STRING,
-    },
-    planet_description: {
+
+    description: {
       type: DataTypes.TEXT,
     },
     hostility: {
@@ -56,7 +51,38 @@ Planet.init(
   {
     sequelize,
     modelName: "Planet",
-    tableName: "planets",
+    tableName: "planet",
+    timestamps: false,
+  }
+);
+
+class Users extends Model {}
+Users.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    username: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    created_at: {
+      type: DataTypes.DATE,
+      defaultValue: DataTypes.NOW,
+      allowNull: false,
+    },
+  },
+  {
+    sequelize,
+    modelName: "Users",
+    tableName: "users",
     timestamps: false,
   }
 );
@@ -74,6 +100,16 @@ app.get("/api/planets", async (_req, res) => {
     res.json(planets);
   } catch (error) {
     console.error("Error fetching planets:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
+app.get("/api/users", async (_, res) => {
+  try {
+    const users = await Users.findAll();
+    res.json(users);
+  } catch (error) {
+    console.error("Error fetching users:", error);
     res.status(500).json({ error: "Internal server error" });
   }
 });

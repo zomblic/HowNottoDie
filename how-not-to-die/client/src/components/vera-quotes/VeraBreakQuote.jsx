@@ -6,7 +6,10 @@ const VeraBreakQuote = () => {
   const quotes = [
     "VERA: \"Propulsion system offline. Navigation offline. We're dead in the water, Commander.\"",
     "VERA: \"I told you not to go. Now the Interstellar Propulsion Matrix is completely nonfunctional.\"",
-    "VERA: \"Diagnostics report critical failures. Shall I send a distress signal?\""
+
+    "VERA: \"Diagnostics report critical failures. Shall I send a distress signal?\"",
+    "VERA: \"Please follow the emergency lights to the airlock. I'll eject you immediately.\"",
+    
   ];
 
   const randomIndex = Math.floor(Math.random() * quotes.length);

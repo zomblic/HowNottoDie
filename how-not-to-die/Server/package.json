@@ -5,7 +5,7 @@
     "type": "module",
     "scripts": {
         "build": "npx tsc",
-        "start": "npm run build && node dist/server.js --ignore client",
+        "start": "npm run build && node dist/server.js --ignore client --env-file='.env'",
         "dev": "npx nodemon",
         "test": "echo \"Error: no test specified\" && exit 1",
         "seed": "node dist/seeds/index.js"
@@ -28,6 +28,7 @@
         "@types/bcrypt": "^5.0.2",
         "@types/express": "^5.0.1",
         "@types/jsonwebtoken": "^9.0.9",
+        "@types/node": "^22.13.14",
         "@types/pg": "^8.11.11",
         "@types/react": "^19.0.10",
         "@types/react-dom": "^19.0.4",
@@ -37,6 +38,7 @@
         "eslint-plugin-react-hooks": "^5.1.0",
         "eslint-plugin-react-refresh": "^0.4.19",
         "globals": "^15.15.0",
+        "ts-node": "^10.9.2",
         "typescript": "^5.8.2",
         "vite": "^6.2.0"
     }

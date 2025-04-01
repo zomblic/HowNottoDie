@@ -3,7 +3,7 @@
 
 import React from 'react';
 import LoginForm from '../components/LoginForm';
-// import RegisterForm from '../components/RegisterForm';
+import Modal from '../components/RegisterForm';
 // import AuthWrapper from '../components/AuthWrapper';
 
 const Home = () => {
@@ -12,6 +12,7 @@ const Home = () => {
       <h2>Welcome, Commander</h2>
       <p>Please Sign In</p>
       <LoginForm />
+      <Modal/>
     </>
   );
 };

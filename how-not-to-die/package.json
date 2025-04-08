@@ -25,7 +25,7 @@
       "client:lint": "cd client && npm run lint",
 
       "start:render": "psql \"$DATABASE_URL\" < server/db/create_schema.sql && psql \"$DATABASE_URL\" < server/db/seeds.sql && npm --prefix server run start",
-      "render-build": "git lfs pull && npm run install:all && npm run build",
+      "render-build": "npm run install:all && npm run build",
       "render-start": "npm run install:all && npm run start"
       
 

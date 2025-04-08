@@ -1,0 +1,41 @@
+{
+    "name": "how-not-to-die",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "description": "",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "clean": "rm -rf client/dist server/dist",
+      "postinstall": "git lfs pull",
+
+      "install:all": "npm --prefix server install && npm --prefix client install",
+      "build": "cd server && npm run build && cd ../client && npm run build",
+      "start": "npm run build && concurrently \"npm run server:start\" \"npm run client:start\"",
+      "start:dev": "concurrently \"npm run server:dev\" \"wait-on tcp:3001 && npm run client:dev\"",
+
+      "server:start": "cd server && npm start",
+      "server:dev": "cd server && npm run dev",
+      "server:build": "cd server && npm run build",
+      "seed": "cd server && npm run seed",
+
+      "client:start": "cd client && npm start",
+      "client:build": "cd client && npm run build",
+      "client:dev": "cd client && npm run dev",
+      "client:lint": "cd client && npm run lint",
+
+      "start:render": "psql \"$DATABASE_URL\" < server/db/create_schema.sql && psql \"$DATABASE_URL\" < server/db/seeds.sql && npm --prefix server run start",
+      "render-build": "git lfs pull && npm run install:all && npm run build",
+      "render-start": "npm run install:all && npm run start"
+      
+
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "concurrently": "^8.2.2",
+      "nodemon": "^3.1.3",
+      "wait-on": "^7.2.0"
+    }
+  }

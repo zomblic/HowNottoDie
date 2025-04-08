@@ -1,0 +1,226 @@
+/* file path: how-not-to-die/client/src/assets/css/ConsoleLayout.module.css */
+
+.consoleBackground {
+  background-image: url('/assets/images/ConsoleDesktop.png');
+  background-size: cover;
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mobile Small (360-374px) */
+@media screen and (min-width: 360px) and (max-width: 374px) {
+  .consoleBackground {
+    background-image: url('/assets/images/ConsoleMobile.png');
+    background-size: cover;
+    background-position: center top;
+  }
+}
+
+/* Mobile Mid (375-429px) */
+@media screen and (min-width: 375px) and (max-width: 429px) {
+  .consoleBackground {
+    background-image: url('/assets/images/ConsoleMobile.png');
+    background-size: cover;
+    background-position: center top;
+  }
+}
+
+/* Mobile Large (430-767px) */
+@media screen and (min-width: 430px) and (max-width: 767px) {
+  .consoleBackground {
+    background-image: url('/assets/images/ConsoleMobile.png');
+    background-size: cover;
+    background-position: center top;
+  }
+}
+
+/* Galaxy s25 override */
+@media screen and (width: 1440px) and (height: 3120px) {
+  .consoleBackground {
+    background-image: url('/assets/images/ConsoleMobile.png');
+    background-size: cover;
+    background-position: center top;
+  }
+}
+
+/* Tablet Range (768-930px) */
+@media screen and (min-width: 768px) and (max-width: 930px) {
+  .consoleBackground {
+    background-image: url('/assets/images/ConsoleTablet.png');
+  }
+}
+
+/* Laptop Range (931-1080px) */
+@media screen and (min-width: 931px) and (max-width: 1080px) {
+  .consoleBackground {
+    background-image: url('/assets/images/ConsoleDesktop.png');
+  }
+}
+
+/* 1536 x 864 Laptop override */
+@media screen and (width: 1536px) and (height: 864px) {
+  .consoleBackground {
+    background-image: url('/assets/images/ConsoleDesktop.png');
+  }
+}
+
+/* Standard Desktop (1081-1440px) */
+@media screen and (min-width: 1081px) and (max-width: 1440px) {
+  .consoleBackground {
+    background-image: url('/assets/images/ConsoleDesktop.png');
+  }
+}
+
+/* widescreen Desktop (1441-1863px) */
+@media screen and (min-width: 1441px) and (max-width: 1863px) {
+  .consoleBackground {
+    background-image: url('/assets/images/ConsoleDesktop.png');
+  }
+}
+
+/* Large Desktop (1864-2879px) */
+@media screen and (min-width: 1864px) and (max-width: 2879px) {
+  .consoleBackground {
+    background-image: url('/assets/images/ConsoleDesktop.png');
+  }
+}
+
+.consoleScreen {
+  position: absolute;
+  top: 22%;
+  left: 21%;
+  width: 59.5%;
+  height: 40%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #00ffe1;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.3);
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  }
+
+/* Mobile Small (360-374px) */
+@media screen and (min-width: 360px) and (max-width: 374px) {
+  .consoleScreen {
+    width: 61%;
+    top: 30%;
+    left: 20%;
+    height: 26%;
+  }
+}
+
+/* Mobile Mid (375-429px) */
+@media screen and (min-width: 375px) and (max-width: 429px) {
+  .consoleScreen {
+    width: 62%;
+    top: 20%;
+    left: 20%;
+    height: 40%;
+  }
+}
+
+/* Mobile Large (430-767px) */
+@media screen and (min-width: 430px) and (max-width: 767px) {
+  .consoleScreen {
+    width: 62%;
+    top: 20%;
+    left: 20%;
+    height: 40%;
+  }
+}
+
+/* Tablet Range (768-930px) */
+@media screen and (min-width: 768px) and (max-width: 930px) {
+  .consoleScreen {
+    width: 47%;
+    top: 22%;
+    left: 28%;
+    height: 38%;
+  }
+}
+
+/* Laptop Range (931-1080px) */
+@media screen and (min-width: 931px) and (max-width: 1080px) {
+  .consoleScreen {
+    width: 59.5%;
+    top: 21%;
+    left: 21%;
+    height: 40%;
+  }
+}
+
+/* Standard Desktop (1081-1440px) */
+@media screen and (min-width: 1081px) and (max-width: 1440px) {
+  .consoleScreen {
+    width: 60.5%;
+    top: 22%;
+    left: 20.5%;
+    height: 40%;
+  }
+}
+
+/* Widescreen Desktop (1441-1863px) */
+@media screen and (min-width: 1441px) and (max-width: 1863px) {
+  .consoleScreen {
+    width: 61%;
+    top: 18%;
+    left: 20%;
+    height: 45%;
+  }
+}
+
+/* Large Desktop (1864-2879px) */
+@media screen and (min-width: 1864px) and (max-width: 2879px) {
+  .consoleScreen {
+    width: 69.5%;
+    top: 20%;
+    left: 16%;
+    height: 43%;
+  }
+}
+
+
+
+.consoleContent {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.navColumn {
+  width: 30%;
+  border-right: 1px solid rgba(0, 255, 200, 0.2);
+  padding-right: 1rem;
+  overflow-y: auto;
+}
+
+.pageContent {
+  width: 70%;
+  padding-left: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* My Desktop (1145x2313px) */
+@media screen and (min-width: 1000px) and (max-width: 4000px) {
+  .consoleBackground {
+    background-image: url('/assets/images/ConsoleDesktop.png');
+  }
+
+  .consoleScreen {
+    width: 59.5%;
+    top: 15%;
+    left: 21%;
+    height: 51%;
+  }
+}

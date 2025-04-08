@@ -21,16 +21,21 @@ CREATE TABLE landingspot (
   
     id SERIAL PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
+    planet VARCHAR(500) NOT NULL,
     description TEXT NOT NULL,
-    flora VARCHAR(50) NOT NULL,
-    fauna VARCHAR(50) NOT NULL,
-    planet_id INT NOT NULL,
+    flora VARCHAR(500) NOT NULL,
+    fauna VARCHAR(500) NOT NULL,
+        planet_id INT NOT NULL,
     FOREIGN KEY (planet_id) REFERENCES planet(id) ON DELETE CASCADE
 );
 
 CREATE TABLE flora (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(50) NOT NULL,
+    name VARCHAR(500) NOT NULL,
+    planet VARCHAR(500) NOT NULL,
+    teeth VARCHAR(500) NOT NULL,
+    lickability VARCHAR(500) NOT NULL,
+    food VARCHAR(500) NOT NULL,
     description TEXT NOT NULL,
     planet_id INT NOT NULL,
     FOREIGN KEY (planet_id) REFERENCES planet(id) ON DELETE CASCADE
@@ -39,7 +44,11 @@ CREATE TABLE flora (
 
 CREATE TABLE fauna (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(50) NOT NULL,
+    name VARCHAR(500) NOT NULL,
+    planet VARCHAR(500) NOT NULL,
+    teeth INT NOT NULL,
+    claws INT NOT NULL,
+    food VARCHAR(500) NOT NULL,
     description TEXT NOT NULL,
     planet_id INT NOT NULL,
     FOREIGN KEY (planet_id) REFERENCES planet(id) ON DELETE CASCADE
@@ -47,7 +56,8 @@ CREATE TABLE fauna (
 
 CREATE TABLE unexplained (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(50) NOT NULL,
+    name VARCHAR(500) NOT NULL,
+    planet VARCHAR(500) NOT NULL,
     description TEXT NOT NULL,
     planet_id INT NOT NULL,
     FOREIGN KEY (planet_id) REFERENCES planet(id) ON DELETE CASCADE

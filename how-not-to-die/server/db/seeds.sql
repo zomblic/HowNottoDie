@@ -34,7 +34,7 @@ VALUES
 ('Missing Ship', 'Ocean 12 B', 'Vera said that once a shuffle just simply vanished before it landed. In single glup.', 3),
 ('The Tree Folk', 'Brune', 'Vera mentioned that once a pilot entered the forest, and never came back, but sometimes you can still hear their screams.', 2),
 ('Silence', 'Doubt', 'FILE CORRUPTED. FILE CORRUPTED.', 1);
-('If', 'you', 'hear', 'it', 1),
+('you', 'hear', 'it', 1),
 
 -- 🌱 Seed dummy users (password for all = "test1234")
 

@@ -1,5 +1,5 @@
 //file path: HowNotToDieDemo/how-not-to-die/server/src/routes/auth-routes.ts
-
+import { Request, Response } from 'express';
 import express from 'express';
 import bcrypt from 'bcrypt';
 import User from '../models/user.js'; 
@@ -7,7 +7,7 @@ import { generateToken } from '../middleware/auth.js';
 
 const router = express.Router();
 
-router.post('/register', async (req, res) => {
+router.post('/register', async (req: Request, res: Response) => {
   const { username, password } = req.body;
   console.log('📬 Received register request:', username);
 
@@ -43,7 +43,7 @@ router.post('/register', async (req, res) => {
   res.status(status).json(response);
 });
 
-router.post('/login', async (req, res) => {
+router.post('/login', async (req: Request, res: Response) => {
   const { username, password } = req.body;
   console.log('🔐 Login attempt for:', username);
 

@@ -14,9 +14,9 @@
     "start:render": "psql \"$DATABASE_URL\" < server/db/create_schema.sql && psql \"$DATABASE_URL\" < server/db/seeds.sql && npm --prefix server run start",
     "render-build": "git lfs pull && npm run install:all && npm run build",
     "render-start": "npm run install:all && npm run start"
-
   },
   "dependencies": {
+    "how-not-to-die": "file:..",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.4.0"
@@ -32,6 +32,7 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
     "sass-embedded": "^1.86.2",
+    "typescript": "^5.8.3",
     "vite": "^6.2.3"
   }
 }

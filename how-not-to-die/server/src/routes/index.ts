@@ -5,4 +5,5 @@ import userRoutes from '../routes/api/user-routes.js';
 
 
 
+//module.exports = { authRoutes, userRoutes };
 export { authRoutes, userRoutes };

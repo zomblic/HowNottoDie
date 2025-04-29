@@ -2,7 +2,7 @@
     "name": "how-not-to-die",
     "private": true,
     "version": "0.0.0",
-    "type": "commonjs",
+    "type": "module",
     "scripts": {
         "build": "npx tsc",
         "start": "npm run build && node dist/server.js",
@@ -44,8 +44,7 @@
         "eslint-plugin-react-refresh": "^0.4.19",
         "globals": "^15.15.0",
         "ts-node": "^10.9.2",
-        "typescript": "^5.8.2",
+        "typescript": "^5.8.3",
         "vite": "^6.2.0"
-    },
-    "type": "module"
+    }
 }

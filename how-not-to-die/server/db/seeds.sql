@@ -1,6 +1,6 @@
 INSERT INTO planet ( name, description, hostility, exploration) 
 VALUES 
-('Newyn', 'Newyn is a desolate world. Crops wwill not yield and cattle will not endure. Within Newyn There are small Oasis known as the Glimpses of Paradise. These Oasis rarely last long, forcing the life of Newyn to be nomadic, moving from oasis to oasis. The Life of Newyn is hardy, built to last, constantly evolving to match the environment. The general weather of Newyn is dark and cold, with constant cloud coverage, raining for days at a time dropping temperatures well below freezing. Forcing the Nomads to travel to Oasis with large Heat Reserves bellowing from the Planets Core.', 'Extremely High', 87),
+('Doubt', 'Doubt is a desolate world. Crops wwill not yield and cattle will not endure. Within Newyn There are small Oasis known as the Glimpses of Paradise. These Oasis rarely last long, forcing the life of Newyn to be nomadic, moving from oasis to oasis. The Life of Newyn is hardy, built to last, constantly evolving to match the environment. The general weather of Newyn is dark and cold, with constant cloud coverage, raining for days at a time dropping temperatures well below freezing. Forcing the Nomads to travel to Oasis with large Heat Reserves bellowing from the Planets Core.', 'Extremely High', 87),
 ('Brune', 'Brune is divided into 2 terrains, the Taiga, the high altitude forest dominated by aerial life, and the deep caverns, Massive cities mined deep into the mountains, the hubbub of life pouring throughout the great halls, industry and innovation driven by the need for survival against the animals outside. The need to dig ever deeper.', 'Moderate', 45),
 ('Ocean 12 B', 'A Massive water planet only accessible to land lubbers by the elevators on the rocky outcroppings. The sea Folk of !2 B are divided into 2 types. The Ichthyites, and the Crustacs. The Ichthyites are more like the earth fish, while the Crustacs are more insectoid. The Planet is divided into 4 zones, the shallows where the smallest of each species are able to live, the Reefs, where the main living conditions of each species are held, the open waters, where industrial zones are always moving forward, and finally the abyss, where the hive mind dwells.', 'Low-unknown', 12);
 
@@ -34,7 +34,6 @@ VALUES
 ('Missing Ship', 'Ocean 12 B', 'Vera said that once a shuffle just simply vanished before it landed. In single glup.', 3),
 ('The Tree Folk', 'Brune', 'Vera mentioned that once a pilot entered the forest, and never came back, but sometimes you can still hear their screams.', 2),
 ('Silence', 'Doubt', 'FILE CORRUPTED. FILE CORRUPTED.', 1);
-('you', 'hear', 'it', 1),
 
 -- 🌱 Seed dummy users (password for all = "test1234")
 
